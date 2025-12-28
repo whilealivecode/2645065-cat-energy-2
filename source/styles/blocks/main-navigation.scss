@@ -23,7 +23,12 @@
 }
 
 .main-navigation__link {
-
+  font-family: $secondary-font;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $basic-black;
+  text-decoration-line: none;
 }
 
 .main-navigation__toggle {
