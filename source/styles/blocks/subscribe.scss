@@ -1,11 +1,16 @@
 .subscribe {
-
+  font-family: $secondary-font;
+  color: $basic-black;
 }
 
 .subscribe__title {
-
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
 }
 
 .subscribe__description {
-
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
 }
