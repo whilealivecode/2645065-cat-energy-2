@@ -3,7 +3,7 @@
 }
 
 .product-card__link {
-
+  text-decoration: none;
 }
 
 .product-card__image {
@@ -11,7 +11,13 @@
 }
 
 .product-card__title {
-
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: $special-dark-grey;
 }
 
 .product-card__specs {
@@ -19,7 +25,9 @@
 }
 
 .product-card__spec {
-
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
 }
 
 .product-card__spec-name {
@@ -27,7 +35,7 @@
 }
 
 .product-card__spec-value {
-
+  margin: 0;
 }
 
 .product-card__button {
