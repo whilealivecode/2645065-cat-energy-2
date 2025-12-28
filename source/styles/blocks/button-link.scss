@@ -1,11 +1,26 @@
 .button-link {
-
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration-line: none;
 }
 
 .button-link--primary {
   background-color: $basic-green;
+  color: $basic-white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .button-link--secondary {
   background-color: $basic-grey;
+  color: $special-dark-grey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
 }
