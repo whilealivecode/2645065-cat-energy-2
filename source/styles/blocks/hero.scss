@@ -1,13 +1,21 @@
 .hero {
-
+  background-image: linear-gradient(to bottom, $basic-green 63%, $basic-white 63%, $basic-white 100%);
+  font-family: $secondary-font;
+  color: $basic-white;
 }
 
 .hero__title {
-
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
 }
 
 .hero__slogan {
-
+  font-size: 14px;
+  line-height: 14px;
+  margin-left: 60px;
+  text-transform: uppercase;
 }
 
 .hero__image {
