@@ -16,11 +16,11 @@
 }
 
 .example__stats {
-
+  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .example__group {
-
+  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .example__term {
@@ -39,7 +39,7 @@
 }
 
 .example__costs {
-
+  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .example__label {

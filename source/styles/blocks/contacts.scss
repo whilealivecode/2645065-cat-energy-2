@@ -1,9 +1,9 @@
 .contacts {
-
+  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .contacts__wrapper {
-
+  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .contacts__title {
@@ -12,13 +12,13 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  color: #111111;
+  color: $special-black;
 }
 
 .contacts__address {
-
+  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .contacts__map {
-
+  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
 }

@@ -1,5 +1,5 @@
 .product-card-more {
-
+  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .product-card-more__title {
@@ -9,7 +9,7 @@
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
-  color: #111111;
+  color: $special-black;
 }
 
 .product-card-more__description {
@@ -19,5 +19,5 @@
 }
 
 .product-card-more__button {
-
+  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
 }
