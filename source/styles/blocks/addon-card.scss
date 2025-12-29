@@ -1,5 +1,5 @@
 .addon-card {
-
+  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .addon-card__title {
@@ -23,5 +23,5 @@
 }
 
 .addon-card__button {
-
+  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
 }
