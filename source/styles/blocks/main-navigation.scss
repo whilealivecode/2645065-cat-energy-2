@@ -1,25 +1,37 @@
 .main-navigation {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .main-navigation__logo {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  display: inline-block;
+}
+
+.main-navigation__logo:hover {
+  opacity: 0.8;
+}
+
+.main-navigation__logo:active {
+  opacity: 0.6;
 }
 
 .main-navigation__logo-image {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+}
+
+.main-navigation__logo-image--catalog {
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .main-navigation__list {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .main-navigation__item {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .main-navigation__item--current {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .main-navigation__link {
@@ -32,5 +44,5 @@
 }
 
 .main-navigation__toggle {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }

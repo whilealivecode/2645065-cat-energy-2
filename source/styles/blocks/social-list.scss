@@ -1,23 +1,39 @@
 .social-list {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .social-list__item {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .social-list__link {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  mask-size: 28px 22px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  width: 28px;
+  height: 22px;
+  display: inline-block;
+  background-color: $special-grey;
+}
+
+.social-list__link:hover,
+.social-list__link:focus {
+  background-color: $basic-green;
+}
+
+.social-list__link:active {
+  background-color: $basic-green;
+  opacity: 0.3;
 }
 
 .social-list__link--vkontakte {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  mask-image: url("../../icons/stack.svg#vkontakte");
 }
 
 .social-list__link--youtube {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  mask-image: url("../../icons/stack.svg#youtube");
 }
 
 .social-list__link--telegram {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  mask-image: url("../../icons/stack.svg#telegram");
 }

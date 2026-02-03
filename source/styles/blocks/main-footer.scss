@@ -3,9 +3,18 @@
 }
 
 .main-footer__logo {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  display: inline-block;
+}
+
+.main-footer__logo:hover,
+.main-footer__logo:focus {
+  fill:#3e3e3e;
+}
+
+.main-footer__logo:active {
+  fill: #6b6b6b;
 }
 
 .main-footer__logo-image {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
