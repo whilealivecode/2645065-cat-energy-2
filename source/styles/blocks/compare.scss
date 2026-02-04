@@ -1,35 +1,50 @@
 .compare {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .example__compare {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .compare__images {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  display: flex;
 }
 
 .compare__image-wrapper {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .compare__image-wrapper--before {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  transform: translateX(303px);
 }
 
 .compare__image-wrapper--after {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  transform: translateX(-310px);
 }
 
 .compare__image {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .compare__slider {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .compare__handle {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../../icons/stack.svg#curtain-mobile");
+  background-size: 40px 256px;
+  width: 40px;
+  height: 256px;
+}
+
+@media (min-width: $tablet-width) {
+  .compare__handle {
+    background-image: url("../../icons/stack.svg#curtain-tablet");
+    background-size: 40px 512px;
+    height: 512px;
+  }
 }

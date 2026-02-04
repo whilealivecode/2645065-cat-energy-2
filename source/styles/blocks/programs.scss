@@ -1,21 +1,13 @@
 .programs {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .programs__list {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .programs__item {
   background-color: $basic-grey;
-}
-
-.programs__item--slim {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
-}
-
-.programs__item--pro {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .programs__title {
@@ -25,6 +17,27 @@
   line-height: 37px;
   text-transform: uppercase;
   color: $basic-black;
+}
+
+.programs__title::before {
+  display: inline-block;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.programs__title--slim::before {
+  background-image: url("../../icons/stack.svg#slim-cat-mobile");
+  background-size: 50px 53px;
+  width: 50px;
+  height: 53px;
+}
+
+.programs__title--muscle::before {
+  background-image: url("../../icons/stack.svg#muscle-cat-mobile");
+  background-size: 67px 50px;
+  width: 67px;
+  height: 50px;
 }
 
 .programs__description {
@@ -40,4 +53,22 @@
   text-transform: uppercase;
   color: $basic-black;
   text-decoration-line: none;
+}
+
+.programs__link::after {
+  display: inline-block;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../../icons/stack.svg#arrow");
+  background-size: 24px 11px;
+  width:24px;
+  height: 11px;
+}
+
+.programs__link:hover::after,
+.programs__link:active::after  {
+  background-image: url("../../icons/stack.svg#arrow-interactive");
+  background-size: 32px 11px;
+  width:32px;
 }

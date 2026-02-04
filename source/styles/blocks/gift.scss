@@ -1,11 +1,21 @@
 .gift {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: $basic-green;
+  text-align: center;
+}
+
+.gift::before {
+  display: inline-block;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../../icons/stack.svg#gift-mobile");
+  background-size: 78px 81px;
+  width: 78px;
+  height: 81px;
 }
 
 .gift__text {
   font-size: 16px;
   line-height: 20px;
-  text-align: center;
   color: $basic-white;
-  background-color: $basic-green;
 }
