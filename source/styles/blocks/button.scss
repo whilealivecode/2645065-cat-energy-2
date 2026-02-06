@@ -8,4 +8,24 @@
   line-height: 26px;
   text-transform: uppercase;
   color: $basic-white;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: $special-green;
+}
+
+.button:active {
+  background-color: $special-green;
+  opacity: 0.3;
+}
+
+.button:disabled,
+.button:disabled:hover,
+.button:disabled:focus {
+  background-color: $special-light-grey;
+  color: $basic-white;
+  pointer-events: none;
+  cursor: default;
 }

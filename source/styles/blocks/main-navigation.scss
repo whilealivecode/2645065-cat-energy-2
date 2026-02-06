@@ -43,6 +43,47 @@
   text-decoration-line: none;
 }
 
-.main-navigation__toggle {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+.main-navigation__link:hover {
+  opacity: 0.6;
 }
+
+.main-navigation__link:focus {
+  opacity: 0.3;
+  outline: none;
+}
+
+.main-navigation__toggle--closed {
+  background-image: url("../../icons/stack.svg#hamburger");
+  background-size: 24px 18px;
+}
+
+.main-navigation__toggle {
+  width: 24px;
+  height: 20px;
+  border: none;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  background-image: url("../../icons/stack.svg#close");
+  background-size: 19px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-navigation__toggle:hover,
+.main-navigation__toggle:focus {
+  opacity: 0.7;
+}
+
+.main-navigation__toggle:active {
+  opacity: 0.5;
+}
+
+.main-navigation__toggle:disabled,
+.main-navigation__toggle:disabled:hover,
+.main-navigation__toggle:disabled:focus {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.2;
+}
+

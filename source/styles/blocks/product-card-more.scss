@@ -1,5 +1,7 @@
 .product-card-more {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .product-card-more__title {
@@ -19,5 +21,5 @@
 }
 
 .product-card-more__button {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: $basic-grey; // Временное свойство, чтобы линтер не показывал ошибку
 }

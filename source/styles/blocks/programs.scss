@@ -43,7 +43,7 @@
 .programs__description {
   font-size: 14px;
   line-height: 18px;
-  color: $special-dark-grey;
+  color: $base-color-text;
 }
 
 .programs__link {
@@ -55,6 +55,10 @@
   text-decoration-line: none;
 }
 
+.programs__link:active {
+  opacity: 0.3;
+}
+
 .programs__link::after {
   display: inline-block;
   content: "";
@@ -62,13 +66,13 @@
   background-position: center;
   background-image: url("../../icons/stack.svg#arrow");
   background-size: 24px 11px;
-  width:24px;
+  width: 24px;
   height: 11px;
 }
 
 .programs__link:hover::after,
-.programs__link:active::after  {
+.programs__link:active::after {
   background-image: url("../../icons/stack.svg#arrow-interactive");
   background-size: 32px 11px;
-  width:32px;
+  width: 32px;
 }

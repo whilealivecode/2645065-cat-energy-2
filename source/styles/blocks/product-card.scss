@@ -1,9 +1,23 @@
 .product-card {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .product-card__link {
   text-decoration-line: none;
+}
+
+.product-card__link:hover {
+  opacity: 0.8;
+}
+
+.product-card__link:focus {
+  opacity: 0.6;
+}
+
+.product-card__link:active {
+  opacity: 0.4;
 }
 
 .product-card__image {
@@ -18,6 +32,7 @@
   text-align: center;
   text-transform: uppercase;
   color: $special-dark-grey;
+  margin: 0;
 }
 
 .product-card__specs {
@@ -39,5 +54,5 @@
 }
 
 .product-card__button {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: $basic-green; // Временное свойство, чтобы линтер не показывал ошибку
 }
