@@ -34,6 +34,7 @@
 }
 
 .compare__handle {
+  display: block;
   position: absolute;
   border: none;
   padding: 0;
@@ -41,34 +42,60 @@
   border-radius: 2px;
   width: 4px;
   height: 256px;
-  top: 0;
   left: 50%;
   transform: translateX(-50%);
   cursor: ew-resize;
 }
 
+.compare__handle::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px solid;
+  box-shadow: inset 0 0 0 20px #fff;
+  border-color: $special-grey;
+}
+
+.compare__handle::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  mask-image: url("../../icons/stack.svg#inner-arrows");
+  mask-size: 40px 40px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: $special-grey;
+}
+
+.compare__handle:hover::before {
+  border-color: $basic-green;
+}
+
+.compare__handle:active::before {
+  border-color: $special-green;
+}
+
+.compare__handle:hover::after,
 .compare__handle:hover {
   background-color: $basic-green;
+}
+
+.compare__handle:hover::after {
+  background-color: $special-green;
 }
 
 .compare__handle:active {
   background-color: $special-green;
   opacity: 0.6;
-}
-
-.compare__thumb {
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  fill: $special-grey;
-}
-
-.compare__thumb:hover {
-  fill: $basic-green;
-}
-
-.compare__thumb:active {
-  fill: $special-green;
 }
 
 @media (min-width: $tablet-width) {

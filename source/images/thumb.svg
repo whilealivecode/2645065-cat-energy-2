@@ -1,5 +1,0 @@
-<svg class="compare__thumb" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect class="compare__fill" x="0" y="0" width="40" height="40" rx="20"></rect>
-<rect x="2" y="2" width="36" height="36" rx="18" fill="#fff"></rect>
-<path class="compare__fill" d="m16 11-8 9 8 9v-18Zm16 9-8-9v18l8-9Z"></path>
-</svg>
