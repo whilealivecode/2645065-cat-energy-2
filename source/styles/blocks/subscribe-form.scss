@@ -1,5 +1,5 @@
 .subscribe-form {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .subscribe-form__wrapper {
@@ -7,7 +7,33 @@
 }
 
 .subscribe-form__input {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  color: $base-color-text;
+  border: 1px solid $special-light-grey4;
+}
+
+.subscribe-form__input:hover {
+  border: 1px solid $special-light-grey3;
+}
+
+.subscribe-form__input:focus {
+  outline: 2px solid $base-color-text;
+}
+
+.subscribe-form__input:active {
+  opacity: 0.7;
+}
+
+.subscribe-form__input:invalid {
+  border: 2px solid $basic-red;
+}
+
+.subscribe-form__input:disabled,
+.subscribe-form__input:disabled:hover,
+.subscribe-form__input:disabled:focus {
+  background-color: $special-light-grey4;
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: default;
 }
 
 .subscribe-form__button {

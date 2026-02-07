@@ -27,14 +27,14 @@
 }
 
 .programs__title--slim::before {
-  background-image: url("../../icons/stack.svg#slim-cat-mobile");
+  background-image: url("../../icons/stack.svg#slim-cat");
   background-size: 50px 53px;
   width: 50px;
   height: 53px;
 }
 
 .programs__title--muscle::before {
-  background-image: url("../../icons/stack.svg#muscle-cat-mobile");
+  background-image: url("../../icons/stack.svg#muscle-cat");
   background-size: 67px 50px;
   width: 67px;
   height: 50px;
@@ -62,17 +62,18 @@
 .programs__link::after {
   display: inline-block;
   content: "";
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("../../icons/stack.svg#arrow");
-  background-size: 24px 11px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: $basic-black;
+  mask-image: url("../../icons/stack.svg#arrow");
+  mask-size: 24px 11px;
   width: 24px;
   height: 11px;
 }
 
 .programs__link:hover::after,
 .programs__link:active::after {
-  background-image: url("../../icons/stack.svg#arrow-interactive");
-  background-size: 32px 11px;
+  mask-image: url("../../icons/stack.svg#arrow-interactive");
+  mask-size: 32px 11px;
   width: 32px;
 }
