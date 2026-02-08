@@ -71,6 +71,7 @@
   height: 11px;
 }
 
+/* Стайлгайд не включает :focus. Решение, ориентированное на удобство пользователя: :focus не добавлять, чтобы стрелка не смещалась при фокусе с клавиатуры */
 .programs__link:hover::after,
 .programs__link:active::after {
   mask-image: url("../../icons/stack.svg#arrow-interactive");
