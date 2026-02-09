@@ -15,12 +15,28 @@
   text-align: center;
 }
 
+.button-link--primary:hover,
+.button-link--primary:focus {
+  background-color: $special-green;
+}
+
+.button-link--primary:active {
+  background-color: $special-green;
+  opacity: 0.3;
+}
+
 .button-link--secondary {
   background-color: $basic-grey;
-  color: $special-dark-grey;
+  color: $base-color-text;
   padding-top: 10px;
   padding-bottom: 10px;
   display: block;
   text-transform: uppercase;
   text-align: center;
+}
+
+.button-link--secondary:hover,
+.button-link--secondary:focus,
+.button-link--secondary:active {
+  background-color: $special-light-grey2;
 }

@@ -1,35 +1,130 @@
 .compare {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .example__compare {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .compare__images {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  display: flex;
+  position: relative;
+  width: 280px;
+  height: 256px;
 }
 
 .compare__image-wrapper {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .compare__image-wrapper--before {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
 }
 
 .compare__image-wrapper--after {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
 }
 
 .compare__image {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
-}
-
-.compare__slider {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  display: block;
 }
 
 .compare__handle {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  display: block;
+  position: absolute;
+  border: none;
+  padding: 0;
+  background-color: $special-grey;
+  border-radius: 2px;
+  width: 4px;
+  height: 256px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: ew-resize;
+}
+
+.compare__handle::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px solid;
+  box-shadow: inset 0 0 0 20px $basic-white;
+  border-color: $special-grey;
+}
+
+.compare__handle::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  mask-image: url("../../icons/stack.svg#inner-arrows");
+  mask-size: 40px 40px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: $special-grey;
+}
+
+.compare__handle:hover::before {
+  border-color: $basic-green;
+}
+
+.compare__handle:active::before {
+  border-color: $special-green;
+}
+
+.compare__handle:hover::after,
+.compare__handle:hover {
+  background-color: $basic-green;
+}
+
+.compare__handle:hover::after {
+  background-color: $special-green;
+}
+
+.compare__handle:active {
+  background-color: $special-green;
+  opacity: 0.6;
+}
+
+.compare__handle:disabled,
+.compare__handle:disabled:hover,
+.compare__handle:disabled:focus {
+  background-color: $special-light-grey3;
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.8;
+}
+
+.compare__handle:disabled::after {
+  background-color: $special-light-grey3;
+  opacity: 0.8;
+}
+
+.compare__handle:disabled::before {
+  border-color: $special-light-grey3;
+  opacity: 0.8;
+  box-shadow: inset 0 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+@media (min-width: $tablet-width) {
+  .compare__images {
+    width: 560px;
+    height: 512px;
+  }
+
+  .compare__handle {
+    height: 512px;
+  }
 }

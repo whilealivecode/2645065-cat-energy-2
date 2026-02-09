@@ -1,5 +1,5 @@
 .instructions {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .instructions__title {
@@ -11,27 +11,37 @@
 }
 
 .instructions__list {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .instructions__item {
   font-size: 14px;
   line-height: 18px;
-  color: $special-dark-grey;
+  color: $base-color-text;
 }
 
-.instructions__item--nutrients {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+.instructions__item::before {
+  display: inline-block;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60px 60px;
+  width: 60px;
+  height: 60px;
 }
 
-.instructions__item--preparation {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+.instructions__item--nutrients::before {
+  background-image: url("../../icons/stack.svg#nutrients-mobile");
 }
 
-.instructions__item--replacement {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+.instructions__item--preparation::before {
+  background-image: url("../../icons/stack.svg#preparation-mobile");
 }
 
-.instructions__item--progress {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+.instructions__item--replacement::before {
+  background-image: url("../../icons/stack.svg#replacement-mobile");
+}
+
+.instructions__item--progress::before {
+  background-image: url("../../icons/stack.svg#progress-mobile");
 }

@@ -1,5 +1,7 @@
 .product-card-more {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .product-card-more__title {
@@ -10,6 +12,25 @@
   text-align: center;
   text-transform: uppercase;
   color: $special-black;
+  position: relative;
+  padding-top: 53px;
+  margin: 0;
+}
+
+.product-card-more__title::before,
+.product-card-more__title::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 30px;
+  background-color: $special-light-grey5;
+  left: 50%;
+  top: 0;
+  bottom: 23px;
+}
+
+.product-card-more__title::after {
+  transform: rotate(90deg);
 }
 
 .product-card-more__description {
@@ -19,5 +40,5 @@
 }
 
 .product-card-more__button {
-  background-color: $basic-white; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: $basic-grey; // Временное свойство, чтобы линтер не показывал ошибку
 }
