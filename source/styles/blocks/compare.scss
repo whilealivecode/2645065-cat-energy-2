@@ -119,7 +119,8 @@
 }
 
 @media (min-width: $tablet-width) {
-  .compare__images {
+  .compare__images,
+  .compare__image {
     width: 560px;
     height: 512px;
   }

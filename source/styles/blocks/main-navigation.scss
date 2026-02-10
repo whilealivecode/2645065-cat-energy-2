@@ -18,6 +18,20 @@
   background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
+@media (min-width: $tablet-width) {
+  .main-navigation__logo-image {
+    width: 174px;
+    height: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-navigation__logo-image {
+    width: 202px;
+    height: 59px;
+  }
+}
+
 .main-navigation__logo-image--catalog {
   background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }

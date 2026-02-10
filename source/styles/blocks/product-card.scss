@@ -24,6 +24,20 @@
   background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
+@media (min-width: $tablet-width) {
+  .product-card__image {
+    width: 200px;
+    height: 210px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product-card__image {
+    width: 169px;
+    height: 210px;
+  }
+}
+
 .product-card__title {
   font-family: $secondary-font;
   font-size: 16px;

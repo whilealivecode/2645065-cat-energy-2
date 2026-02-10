@@ -21,3 +21,17 @@
 .hero__image {
   background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
+
+@media (min-width: $tablet-width) {
+  .hero__image {
+    width: 709px;
+    height: 609px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .hero__image {
+    width: 552px;
+    height: 499px;
+  }
+}
