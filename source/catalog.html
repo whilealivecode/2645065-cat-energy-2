@@ -48,9 +48,9 @@
   </header>
 
   <main class="main">
-    <h1 class="main__title">Каталог продукции</h1>
-    <section class="primary-products">
-      <div class="primary-products__wrapper">
+    <div class="container">
+      <h1 class="main__title">Каталог продукции</h1>
+      <section class="primary-products">
         <h2 class="visually-hidden">Основные товары.</h2>
         <ul class="products-list list-reset">
           <li class="product-card">
@@ -234,11 +234,11 @@
             <a class="button-link product-card-more__button button-link--secondary" href="all-products.html">Показать все</a>
           </li>
         </ul>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <section class="secondary-products">
-      <div class="secondary-products__wrapper">
+      <div class="container">
         <h2 class="secondary-products__title">Дополнительные товары</h2>
         <ul class="addons-list list-reset">
           <li class="addon-card">
@@ -273,15 +273,17 @@
     </section>
 
     <section class="subscribe">
-      <h2 class="subscribe__title">Акции и новинки</h2>
-      <p class="subscribe__description">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
-      <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-        <div class="subscribe-form__wrapper">
-          <label class="visually-hidden" for="subscribe-email">Ваш email</label>
-          <input class="subscribe-form__input" type="email" name="email" id="subscribe-email" value="kuklachev@gmail.com" placeholder="Введите email" required>
-          <button class="button subscribe-form__button" type="submit">Подписаться</button>
-        </div>
-      </form>
+      <div class="container">
+        <h2 class="subscribe__title">Акции и новинки</h2>
+        <p class="subscribe__description">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="subscribe-form__wrapper">
+            <label class="visually-hidden" for="subscribe-email">Ваш email</label>
+            <input class="subscribe-form__input" type="email" name="email" id="subscribe-email" value="kuklachev@gmail.com" placeholder="Введите email" required>
+            <button class="button subscribe-form__button" type="submit">Подписаться</button>
+          </div>
+        </form>
+      </div>
     </section>
 
     <section class="contacts contacts--background">
@@ -301,7 +303,7 @@
   </main>
 
   <footer class="main-footer">
-    <div class="container">
+    <div class="container main-footer__container">
       <a class="main-footer__logo" href="index.html">
         <svg class="main-footer__logo-image" xmlns="http://www.w3.org/2000/svg" width="128" height="24" viewBox="0 0 128 24" role="image">
           <g clip-path="url(#a)">
