@@ -1,9 +1,5 @@
 .instructions {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
-}
-
-.instructions__container {
-  min-height: 380px;
+    min-height: 380px;
 }
 
 .instructions__title {
@@ -50,13 +46,13 @@
 }
 
 @media (min-width: $tablet-width) {
+  .instructions {
+    min-height: 689px;
+  }
+
   .instructions__title {
     font-size: 60px;
     line-height: 60px;
-  }
-
-  .instructions__container {
-    min-height: 689px;
   }
 
   .instructions__list {
@@ -115,7 +111,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .instructions__container {
+  .instructions {
     min-height: 372px;
   }
 

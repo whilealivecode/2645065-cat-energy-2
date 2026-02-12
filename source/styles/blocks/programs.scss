@@ -1,8 +1,4 @@
 .programs {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
-}
-
-.programs__container {
   min-height: 552px;
 }
 
@@ -87,6 +83,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .programs {
+    min-height: 774px;
+  }
+
   .programs__title {
     min-height: 137px;
     padding: 0;
@@ -103,10 +103,6 @@
   .programs__link {
     font-size: 20px;
     line-height: 30px;
-  }
-
-  .programs__container {
-    min-height: 774px;
   }
 
   .programs__list {
@@ -134,7 +130,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .programs__container {
+  .programs {
     min-height: 374px;
   }
 

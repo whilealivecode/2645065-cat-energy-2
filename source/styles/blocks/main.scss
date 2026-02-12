@@ -9,3 +9,10 @@
   font-weight: 400;
   color: $basic-black;
 }
+
+@media (min-width: $tablet-width) {
+  .main__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}

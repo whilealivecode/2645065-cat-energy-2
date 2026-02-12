@@ -1,11 +1,15 @@
 .example {
   background-color: $special-light-grey;
-  display: flex;
-  flex-direction: column;
 }
 
 .example__container {
   min-height: 659px;
+  display: flex;
+  flex-direction: column;
+}
+
+.example__compare {
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .example__title {
@@ -14,6 +18,7 @@
   font-size: 36px;
   line-height: 40px;
   color: $basic-black;
+  margin: 0;
 }
 
 .example__description {
@@ -132,14 +137,36 @@
 
   .example__container {
     min-height: 598px;
+    display: grid;
+    column-gap: 224px;
+    grid-template-columns: 436px 560px;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "title compare"
+    "description compare"
+    "data compare";
   }
 
   .example__stats {
     gap: 42px;
   }
 
+   .example__title {
+    grid-area: title;
+  }
+
+  .example__description {
+    grid-area: description;
+  }
+
   .example__data {
+    grid-area: data;
     flex-direction: column;
+    justify-content: start;
+  }
+
+  .example__compare {
+    grid-area: compare;
   }
 
   .example__costs {
