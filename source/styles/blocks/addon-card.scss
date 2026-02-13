@@ -40,6 +40,8 @@
 
 .addon-card__button {
   grid-area: button;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 @media (min-width: $tablet-width) {

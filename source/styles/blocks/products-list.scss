@@ -1,3 +1,20 @@
 .products-list {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .products-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    column-gap: 60px;
+    row-gap: 142px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .products-list {
+    column-gap: 80px;
+    row-gap: 143px;
+  }
 }

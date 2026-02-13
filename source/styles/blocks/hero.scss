@@ -2,6 +2,17 @@
   background-image: linear-gradient(to bottom, $basic-green 63%, $basic-white 63%, $basic-white 100%);
   font-family: $secondary-font;
   color: $basic-white;
+  min-height: 480px;
+  position: relative;
+}
+
+.hero__container {
+  margin-bottom: 20px;
+}
+
+.hero__link {
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .hero__title {
@@ -9,12 +20,13 @@
   font-size: 36px;
   line-height: 36px;
   text-align: center;
+  margin: 0;
 }
 
 .hero__slogan {
   font-size: 14px;
   line-height: 14px;
-  margin-left: 60px;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -26,6 +38,28 @@
   .hero__image {
     width: 709px;
     height: 609px;
+  }
+
+  .hero {
+    background-image: none;
+    background-color: $basic-white;
+    font-family: $secondary-font;
+    color: $basic-black;
+    min-height: 875px;
+  }
+
+  .hero__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .hero__slogan {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .hero__button {
+    padding: 14px 24px;
   }
 }
 
