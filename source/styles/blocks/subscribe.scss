@@ -3,6 +3,10 @@
   color: $basic-black;
 }
 
+.subscribe__container {
+  padding-bottom: 40px;
+}
+
 .subscribe__title {
   font-weight: 400;
   font-size: 24px;
@@ -14,3 +18,15 @@
   font-size: 16px;
   line-height: 24px;
 }
+
+@media (min-width: $tablet-width) {
+  .subscribe__container {
+    padding-bottom: 104px;
+  }
+
+  .subscribe__title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+

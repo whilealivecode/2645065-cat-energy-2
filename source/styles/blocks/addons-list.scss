@@ -1,3 +1,24 @@
 .addons-list {
   background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
+
+.addons-list__container {
+  margin-bottom: 35px;
+}
+
+@media (min-width: $tablet-width) {
+  .addons-list__container {
+    margin-bottom: 70px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .addons-list {
+    min-width: 895px;
+  }
+
+  .addons-list__container {
+    margin-bottom: 0;
+    margin-right: 80px;
+  }
+}

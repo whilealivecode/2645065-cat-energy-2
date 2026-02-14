@@ -1,29 +1,79 @@
 .addon-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template: "title title" auto "quantity price" auto "button button" auto / auto auto;
+  min-height: 130px;
+  border-bottom: 1px solid $special-light-grey3;
+  padding-bottom: 19px;
+}
+
+.addon-card:first-child {
+  border-top: 1px solid $special-light-grey3;
 }
 
 .addon-card__title {
+  grid-area: title;
   font-family: $secondary-font;
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
   color: $special-dark-grey;
 }
 
 .addon-card__quantity {
+  grid-area: quantity;
   font-size: 14px;
   line-height: 14px;
 }
 
 .addon-card__price {
+  grid-area: price;
   font-size: 14px;
   line-height: 14px;
 }
 
 .addon-card__button {
-  background-color: $basic-green; // Временное свойство, чтобы линтер не показывал ошибку
+  grid-area: button;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .addon-card {
+    border-left: 1px solid $special-light-grey3;
+    border-right: 1px solid $special-light-grey3;
+    grid-template: "title quantity price" auto "button button button" auto / auto auto auto;
+    min-height: 139px;
+    padding-bottom: 28px;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  .addon-card__title {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .addon-card__quantity {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .addon-card__price {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .addon-card {
+    display: grid;
+    grid-template: "title quantity price button" auto / 326px auto 82px 245px;
+    min-height: 72px;
+    border-bottom: 1px solid $special-light-grey3;
+    border-left: none;
+    border-right: none;
+    padding: 0;
+  }
 }

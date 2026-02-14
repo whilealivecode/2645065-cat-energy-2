@@ -2,6 +2,25 @@
   background-color: $basic-grey;
 }
 
+.main-footer__container {
+  display: flex;
+  flex-direction: column;
+  min-height: 240px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-footer__container {
+    flex-direction: row;
+    min-height: 147px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-footer__container {
+    min-height: 169px;
+  }
+}
+
 .main-footer__logo {
   display: inline-block;
   fill: $special-black;

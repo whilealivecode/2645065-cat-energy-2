@@ -1,9 +1,12 @@
 .subscribe-form {
-  color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .subscribe-form__wrapper {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
 }
 
 .subscribe-form__input {
@@ -38,4 +41,20 @@
 
 .subscribe-form__button {
   background-color: $basic-green; // Временное свойство, чтобы линтер не показывал ошибку
+}
+
+@media (min-width: $tablet-width) {
+  .subscribe-form__wrapper {
+    display: grid;
+    grid-template-columns: 376px 256px;
+    grid-template-rows: auto;
+    gap: 0;
+    justify-content: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .subscribe-form__wrapper {
+    grid-template-columns: 376px 256px;
+  }
 }

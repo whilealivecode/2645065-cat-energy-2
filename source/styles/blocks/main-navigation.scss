@@ -1,5 +1,20 @@
 .main-navigation {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  display: flex;
+  flex-direction: column;
+  min-height: 65px;
+}
+
+.main-navigation--index {
+  color: $basic-black;
+}
+
+.main-navigation--catalog {
+  color: $basic-black;
+}
+
+.main-navigation__wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .main-navigation__logo {
@@ -23,11 +38,11 @@
 }
 
 .main-navigation__list {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  display: block;
 }
 
 .main-navigation__item {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  text-align: center;
 }
 
 .main-navigation__item--current {
@@ -39,8 +54,8 @@
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
-  color: $basic-black;
   text-decoration-line: none;
+  color: inherit;
 }
 
 .main-navigation__link:hover {
@@ -67,6 +82,7 @@
   background-size: 19px 20px;
   background-repeat: no-repeat;
   background-position: center;
+  display: block;
 }
 
 .main-navigation__toggle:hover,
@@ -84,4 +100,63 @@
   pointer-events: none;
   cursor: default;
   opacity: 0.2;
+}
+
+@media (min-width: $tablet-width) {
+  .main-navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    min-height: 75px;
+  }
+
+  .main-navigation__logo-image {
+    width: 174px;
+    height: 50px;
+  }
+
+  .main-navigation__list {
+    display: flex;
+    gap: 33px;
+  }
+
+  .main-navigation__toggle {
+    display: none;
+  }
+
+  .main-navigation__item {
+    text-align: left;
+  }
+
+  .main-navigation__link {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-navigation {
+    width: 100%;
+    min-height: 114px;
+  }
+
+  .main-navigation--index {
+    position: absolute;
+    z-index: 1;
+    color: $basic-white;
+  }
+
+  .main-navigation--catalog {
+    position: static;
+  }
+
+  .main-navigation__logo-image {
+    width: 202px;
+    height: 59px;
+  }
+
+  .main-navigation__link {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

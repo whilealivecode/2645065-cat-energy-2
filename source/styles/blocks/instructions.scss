@@ -1,5 +1,5 @@
 .instructions {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+    min-height: 380px;
 }
 
 .instructions__title {
@@ -8,40 +8,137 @@
   font-size: 36px;
   line-height: 40px;
   color: $basic-black;
+  margin: 0;
 }
 
 .instructions__list {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .instructions__item {
+  position: relative;
   font-size: 14px;
   line-height: 18px;
   color: $base-color-text;
-}
-
-.instructions__item::before {
-  display: inline-block;
-  content: "";
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left top;
   background-size: 60px 60px;
-  width: 60px;
-  height: 60px;
+  padding-left: 80px;
+  min-height: 60px;
 }
 
-.instructions__item--nutrients::before {
+.instructions__item--nutrients {
   background-image: url("../../icons/stack.svg#nutrients-mobile");
 }
 
-.instructions__item--preparation::before {
+.instructions__item--preparation {
   background-image: url("../../icons/stack.svg#preparation-mobile");
 }
 
-.instructions__item--replacement::before {
+.instructions__item--replacement {
   background-image: url("../../icons/stack.svg#replacement-mobile");
 }
 
-.instructions__item--progress::before {
+.instructions__item--progress {
   background-image: url("../../icons/stack.svg#progress-mobile");
+}
+
+@media (min-width: $tablet-width) {
+  .instructions {
+    min-height: 689px;
+  }
+
+  .instructions__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .instructions__list {
+    display: grid;
+    grid-template-columns: 250px 250px;
+    gap: 37px 133px;
+    counter-reset: instructions__item;
+  }
+
+  .instructions__item {
+    font-size: 16px;
+    line-height: 24px;
+    background-position: left 40px;
+    padding-left: 0;
+    padding-top: 151px;
+    min-height: 280px;
+    background-size: 80px 80px;
+  }
+
+  .instructions__item::after {
+    position: absolute;
+    content: counter(instructions__item);
+    counter-increment: instructions__item;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    font-family: $secondary-font;
+    font-size: 280px;
+    line-height: 280px;
+    color: $basic-grey;
+    z-index: -1;
+    text-align: center;
+    min-width: 106px;
+    height: 280px;
+  }
+
+  .instructions__item--nutrients {
+    background-image: url("../../icons/stack.svg#nutrients-tablet");
+    min-width: 227px;
+  }
+
+  .instructions__item--preparation {
+    background-image: url("../../icons/stack.svg#preparation-tablet");
+    min-width: 246px;
+  }
+
+  .instructions__item--replacement {
+    background-image: url("../../icons/stack.svg#replacement-tablet");
+    min-width: 247px;
+  }
+
+  .instructions__item--progress {
+    background-image: url("../../icons/stack.svg#progress-tablet");
+    min-width: 249px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .instructions {
+    min-height: 372px;
+  }
+
+  .instructions__list {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .instructions__item--nutrients {
+    background-image: url("../../icons/stack.svg#nutrients-desktop");
+    margin-right: 97px;
+  }
+
+  .instructions__item--preparation {
+    background-image: url("../../icons/stack.svg#preparation-desktop");
+    margin-right: 79px;
+  }
+
+  .instructions__item--replacement {
+    background-image: url("../../icons/stack.svg#replacement-desktop");
+    min-width: 248px;
+    margin-right: 77px;
+  }
+
+  .instructions__item--progress {
+    background-image: url("../../icons/stack.svg#progress-desktop");
+    min-width: 250px;
+  }
 }

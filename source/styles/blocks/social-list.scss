@@ -1,5 +1,6 @@
 .social-list {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  display: flex;
+  gap: 24px;
 }
 
 .social-list__item {

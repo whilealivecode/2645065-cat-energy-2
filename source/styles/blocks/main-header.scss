@@ -1,3 +1,13 @@
 .main-header {
   background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
+
+.main-header__container {
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+}
+
+@media (min-width: $desktop-width) {
+  .main-header__container {
+    position: relative;
+  }
+}

@@ -2,12 +2,23 @@
   background-color: $special-light-grey;
 }
 
+.example__container {
+  min-height: 659px;
+  display: flex;
+  flex-direction: column;
+}
+
+.example__compare {
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+}
+
 .example__title {
   font-family: $secondary-font;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
   color: $basic-black;
+  margin: 0;
 }
 
 .example__description {
@@ -15,12 +26,19 @@
   line-height: 18px;
 }
 
+.example__data {
+  display: flex;
+  flex-direction: column;
+}
+
 .example__stats {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
 }
 
 .example__group {
-  background-color: transparents; // Временное свойство, чтобы линтер не показывал ошибку
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .example__term {
@@ -39,7 +57,9 @@
 }
 
 .example__costs {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
 }
 
 .example__label {
@@ -56,4 +76,101 @@
   line-height: 20px;
   text-transform: uppercase;
   color: $basic-black;
+}
+
+@media (min-width: $tablet-width) {
+  .example {
+    background-image: linear-gradient(to bottom, $basic-white 619px, $special-light-grey 619px);
+  }
+
+  .example__container {
+    min-height: 1081px;
+  }
+
+  .example__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .example__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .example__term {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .example__definition {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .example__label {
+    font-size: 20px;
+  }
+
+  .example__value {
+    font-size: 20px;
+  }
+
+  .example__data {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .example__stats {
+    flex-direction: row;
+    gap: 43px;
+  }
+
+  .example__costs {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example {
+    background-image: linear-gradient(to bottom, $basic-white 136px, $special-light-grey 136px);
+  }
+
+  .example__container {
+    min-height: 598px;
+    display: grid;
+    column-gap: 224px;
+    grid-template-columns: 436px 560px;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "title compare"
+    "description compare"
+    "data compare";
+  }
+
+  .example__stats {
+    gap: 42px;
+  }
+
+   .example__title {
+    grid-area: title;
+  }
+
+  .example__description {
+    grid-area: description;
+  }
+
+  .example__data {
+    grid-area: data;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .example__compare {
+    grid-area: compare;
+  }
+
+  .example__costs {
+    flex-direction: row;
+    gap: 63px;
+  }
 }
