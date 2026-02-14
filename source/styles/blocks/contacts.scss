@@ -6,18 +6,22 @@
   background-color: $basic-grey;
 }
 
+.contacts--background {
+  background-color: $basic-white;
+}
+
 .contacts__container {
   width: $mobile-width;
   margin: 0 auto;
 }
 
 .contacts__data {
-  width: $mobile-width;
-  padding: 0 20px;
+  width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: $basic-white;
+  min-height: 112px;
 }
 
 .contacts__data--background {
@@ -38,10 +42,6 @@
   background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
-.contacts__map {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
-}
-
 @media (min-width: $tablet-width) {
   .contacts {
     min-height: 600px;
@@ -52,10 +52,9 @@
   }
 
   .contacts__data {
-    width: $tablet-width;
-    padding: 60px 70px;
     display: flex;
     justify-content: space-between;
+    min-height: 200px;
   }
 
   .contacts__title {
@@ -83,6 +82,10 @@
     padding: 60px 78px 60px 80px;
     display: flex;
     justify-content: space-between;
+  }
+
+  .contacts--background {
+    background-color: $basic-grey;
   }
 
   .contacts__data--background {
