@@ -14,15 +14,20 @@
 
 <body class="page__body">
   <header class="main-header">
-    <div class="container">
+    <div class="container main-header__container">
       <nav class="main-navigation">
-        <a class="main-navigation__logo" href="#" aria-current="page">
-          <picture>
-            <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/desktop/header-logo-desktop.svg">
-            <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/tablet/header-logo-tablet.svg">
-            <img class="main-navigation__logo-image main-navigation__logo-image--index" src="images/mobile/header-logo-main-mobile.svg" width="190" height="38" alt="Логотип Cat Energy - интернет-магазина кормов для кошек.">
-          </picture>
-        </a>
+        <div class="main-navigation__wrapper">
+          <a class="main-navigation__logo" href="#" aria-current="page">
+            <picture>
+              <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/desktop/header-logo-desktop.svg">
+              <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/tablet/header-logo-tablet.svg">
+              <img class="main-navigation__logo-image main-navigation__logo-image--index" src="images/mobile/header-logo-main-mobile.svg" width="190" height="38" alt="Логотип Cat Energy - интернет-магазина кормов для кошек.">
+            </picture>
+          </a>
+          <button class="main-navigation__toggle main-navigation__toggle--closed" type="button">
+            <span class="visually-hidden">Переключить состояние меню.</span>
+          </button>
+        </div>
         <ul class="main-navigation__list list-reset">
           <li class="main-navigation__item main-navigation__item--current">
             <a class="main-navigation__link" href="#" aria-current="page">
@@ -40,16 +45,13 @@
             </a>
           </li>
         </ul>
-        <button class="main-navigation__toggle main-navigation__toggle--closed" type="button">
-          <span class="visually-hidden">Переключить состояние меню.</span>
-        </button>
       </nav>
     </div>
   </header>
 
   <main class="main">
-    <section class="hero">
-      <div class="container hero__container">
+    <section class="hero hero__container">
+      <div class="container">
         <h1 class="hero__title">Функциональное питание для котов</h1>
         <p class="hero__slogan">Занялся собой? Займись котом!</p>
         <picture>

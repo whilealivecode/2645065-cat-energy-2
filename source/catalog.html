@@ -16,13 +16,19 @@
   <header class="main-header">
     <div class="container">
       <nav class="main-navigation">
-        <a class="main-navigation__logo" href="index.html">
-          <picture>
-            <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/desktop/header-logo-desktop.svg">
-            <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/tablet/header-logo-tablet.svg">
-            <img class="main-navigation__logo-image main-navigation__logo-image--catalog" src="images/mobile/header-logo-catalog-mobile.svg" width="190" height="38" alt="Логотип Cat Energy - интернет-магазина кормов для кошек.">
-          </picture>
-        </a>
+        <div class="main-navigation__wrapper">
+          <a class="main-navigation__logo" href="index.html">
+            <picture>
+              <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/desktop/header-logo-desktop.svg">
+              <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/tablet/header-logo-tablet.svg">
+              <img class="main-navigation__logo-image main-navigation__logo-image--catalog" src="images/mobile/header-logo-catalog-mobile.svg" width="190" height="38" alt="Логотип Cat Energy - интернет-магазина кормов для кошек.">
+            </picture>
+          </a>
+        </div>
+        <button class="main-navigation__toggle main-navigation__toggle--closed" type="button">
+          <span class="visually-hidden">Переключить состояние меню.</span>
+        </button>
+
         <ul class="main-navigation__list list-reset">
           <li class="main-navigation__item">
             <a class="main-navigation__link" href="index.html">
@@ -40,9 +46,6 @@
             </a>
           </li>
         </ul>
-        <button class="main-navigation__toggle main-navigation__toggle--closed" type="button">
-          <span class="visually-hidden">Переключить состояние меню.</span>
-        </button>
       </nav>
     </div>
   </header>

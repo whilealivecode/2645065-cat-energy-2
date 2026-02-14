@@ -3,7 +3,6 @@
   font-family: $secondary-font;
   color: $basic-white;
   min-height: 480px;
-  position: relative;
 }
 
 .hero__container {
@@ -13,6 +12,7 @@
 .hero__link {
   font-size: 16px;
   line-height: 20px;
+  padding: 10px 0;
 }
 
 .hero__title {
@@ -35,11 +35,6 @@
 }
 
 @media (min-width: $tablet-width) {
-  .hero__image {
-    width: 709px;
-    height: 609px;
-  }
-
   .hero {
     background-image: none;
     background-color: $basic-white;
@@ -48,24 +43,71 @@
     min-height: 875px;
   }
 
+  .hero__container {
+    margin-bottom: 0;
+    position: relative;
+  }
+
+  .hero__image {
+    width: 709px;
+    height: 609px;
+    position: absolute;
+    z-index: 1;
+  }
+
   .hero__title {
     font-size: 60px;
     line-height: 60px;
+    text-align: left;
+    margin-left: 90px;
+    max-width: 420px;
   }
 
   .hero__slogan {
     font-size: 20px;
     line-height: 20px;
+    text-align: left;
+    margin-left: 90px;
   }
 
-  .hero__button {
+  .hero__link {
     padding: 14px 24px;
+    font-size: 20px;
+    line-height: 26px;
+    width: 244px;
+    margin-left: 90px;
+    position: absolute;
+    z-index: 2;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .hero {
+    min-height: 694px;
+    background-image: linear-gradient(to right, $basic-white 50%, $basic-green 50%, $basic-green 100%);
+    padding-top: 114px;
+  }
+
+  .hero__container {
+    margin-bottom: 82px;
+  }
+
   .hero__image {
     width: 552px;
     height: 499px;
+    top: 143px;
+    left: calc(50% - 165px);
+  }
+
+  .hero__title {
+    margin-left: 80px;
+  }
+
+  .hero__slogan {
+    margin-left: 80px;
+  }
+
+  .hero__link {
+    margin-left: 80px;
   }
 }
