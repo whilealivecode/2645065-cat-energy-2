@@ -139,19 +139,14 @@
     min-height: 598px;
     display: grid;
     column-gap: 224px;
-    grid-template-columns: 436px 560px;
-    grid-template-rows: auto;
-    grid-template-areas:
-    "title compare"
-    "description compare"
-    "data compare";
+    grid-template: "title compare" auto "description compare" auto "data compare" auto / 436px 560px;
   }
 
   .example__stats {
     gap: 42px;
   }
 
-   .example__title {
+  .example__title {
     grid-area: title;
   }
 
