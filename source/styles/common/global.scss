@@ -17,6 +17,7 @@ body {
   color: $base-color-text;
   background-color: $basic-white;
   margin: 0;
+  min-width: $mobile-width;
 }
 
 .list-reset {

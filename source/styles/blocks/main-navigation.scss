@@ -4,6 +4,14 @@
   min-height: 65px;
 }
 
+.main-navigation--index {
+  color: $basic-black;
+}
+
+.main-navigation--catalog {
+  color: $basic-black;
+}
+
 .main-navigation__wrapper {
   display: flex;
   justify-content: space-between;
@@ -46,8 +54,8 @@
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
-  color: $basic-black;
   text-decoration-line: none;
+  color: inherit;
 }
 
 .main-navigation__link:hover {
@@ -130,8 +138,16 @@
   .main-navigation {
     width: 100%;
     min-height: 114px;
+  }
+
+  .main-navigation--index {
     position: absolute;
     z-index: 1;
+    color: $basic-white;
+  }
+
+  .main-navigation--catalog {
+    position: static;
   }
 
   .main-navigation__logo-image {
@@ -142,6 +158,5 @@
   .main-navigation__link {
     font-size: 20px;
     line-height: 30px;
-    color: $basic-white;
   }
 }

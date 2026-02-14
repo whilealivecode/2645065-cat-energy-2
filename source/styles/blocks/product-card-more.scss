@@ -1,8 +1,7 @@
 .product-card-more {
   display: grid;
   align-items: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding: 25px 20px;
   min-height: 207px;
   border-bottom: 1px solid $special-light-grey2;
 }
@@ -51,10 +50,7 @@
     border: 2px solid $basic-grey;
     width: 324px;
     min-height: 430px;
-    padding-left: 37px;
-    padding-right: 37px;
-    padding-top: 50px;
-    padding-bottom: 40px;
+    padding: 50px 37px 40px;
   }
 
   .product-card-more__title {
@@ -77,10 +73,7 @@
 @media (min-width: $desktop-width) {
   .product-card-more {
     width: 245px;
-    padding-left: 38px;
-    padding-right: 38px;
-    padding-top: 50px;
-    padding-bottom: 40px;
+    padding: 50px 38px 40px;
   }
 
   .product-card-more__title {

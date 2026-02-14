@@ -54,10 +54,6 @@
 
   .secondary-products__container {
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto;
-    grid-template-areas:
-    "title title"
-    "addons gift";
+    grid-template: "title title" auto "addons gift" auto / auto auto;
   }
 }

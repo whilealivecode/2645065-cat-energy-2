@@ -7,14 +7,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
-    column-gap: 60px;
-    row-gap: 142px;
+    gap: 142px 60px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .products-list {
-    column-gap: 80px;
-    row-gap: 143px;
+    gap: 143px 80px;
   }
 }
