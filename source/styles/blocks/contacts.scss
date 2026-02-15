@@ -16,12 +16,11 @@
 }
 
 .contacts__data {
-  width: 100%;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: $basic-white;
   min-height: 112px;
+  padding: 0 20px;
 }
 
 .contacts__data--background {
@@ -55,6 +54,7 @@
     display: flex;
     justify-content: space-between;
     min-height: 200px;
+    padding: 0 30px;
   }
 
   .contacts__title {
@@ -80,8 +80,6 @@
     width: 565px;
     min-height: 199px;
     padding: 60px 78px 60px 80px;
-    display: flex;
-    justify-content: space-between;
   }
 
   .contacts--background {
