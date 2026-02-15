@@ -7,7 +7,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .main-header__container {
-    position: relative;
+  .main-header--index {
+    margin-bottom: -114px;
   }
 }

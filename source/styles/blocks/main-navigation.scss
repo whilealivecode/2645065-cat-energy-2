@@ -138,16 +138,12 @@
   .main-navigation {
     width: 100%;
     min-height: 114px;
+    position: relative;
+    z-index: 10;
   }
 
   .main-navigation--index {
-    position: absolute;
-    z-index: 1;
     color: $basic-white;
-  }
-
-  .main-navigation--catalog {
-    position: static;
   }
 
   .main-navigation__logo-image {
