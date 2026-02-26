@@ -1,5 +1,5 @@
 .instructions {
-  min-height: 380px;
+  min-height: 140px; /* на случай, если будет всего один элемент в списке */
 }
 
 .instructions__title {
@@ -9,12 +9,14 @@
   line-height: 40px;
   color: $basic-black;
   margin: 0;
+  margin-bottom: 40px;
 }
 
 .instructions__list {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   gap: 20px;
+  padding-bottom: 49px;
 }
 
 .instructions__item {
@@ -26,6 +28,7 @@
   background-position: left top;
   background-size: 60px 60px;
   padding-left: 80px;
+  padding-top: 2px;
   min-height: 60px;
 }
 
@@ -46,18 +49,21 @@
 }
 
 @media (min-width: $tablet-width) {
+  $item-width: 250px;
+
   .instructions {
-    min-height: 689px;
+    min-height: 372px; /* на случай, если будет всего один элемент в списке */
   }
 
   .instructions__title {
     font-size: 60px;
     line-height: 60px;
+    margin-bottom: 32px;
   }
 
   .instructions__list {
     display: grid;
-    grid-template-columns: 250px 250px;
+    grid-template-columns: $item-width $item-width;
     gap: 37px 133px;
     counter-reset: instructions__item;
   }
@@ -85,34 +91,49 @@
     color: $basic-grey;
     z-index: -1;
     text-align: center;
-    min-width: 106px;
     height: 280px;
   }
 
   .instructions__item--nutrients {
     background-image: url("../../icons/stack.svg#nutrients-tablet");
-    min-width: 227px;
   }
 
   .instructions__item--preparation {
     background-image: url("../../icons/stack.svg#preparation-tablet");
-    min-width: 246px;
   }
 
   .instructions__item--replacement {
     background-image: url("../../icons/stack.svg#replacement-tablet");
-    min-width: 247px;
   }
 
   .instructions__item--progress {
     background-image: url("../../icons/stack.svg#progress-tablet");
-    min-width: 249px;
+  }
+
+  .instructions__item--nutrients::after {
+    right: calc($item-width - 227px); /* отнимаем от стандартной ширины блока ширину блока в макете */
+  }
+
+  .instructions__item--preparation::after {
+    right: calc($item-width - 246px);
+  }
+
+  .instructions__item--replacement::after {
+    right: calc($item-width - 247px);
+  }
+
+  .instructions__item--progress::after {
+    right: calc($item-width - 249px);
   }
 }
 
 @media (min-width: $desktop-width) {
   .instructions {
     min-height: 372px;
+  }
+
+  .instructions__container {
+    margin-bottom: 69px;
   }
 
   .instructions__list {

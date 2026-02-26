@@ -1,7 +1,7 @@
 $padding-left: 20px;
 
 .programs {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  min-height: 266px; /* на случай, если будет всего один элемент в списке */
 }
 
 .programs__container {
@@ -104,7 +104,7 @@ $padding-left: 20px;
   $padding-left: 52px;
 
   .programs {
-    background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+    min-height: 372px; /* на случай, если будет всего один элемент в списке */
   }
 
   .programs__container {
@@ -162,7 +162,7 @@ $padding-left: 20px;
   $padding-left: 52px;
 
   .programs {
-    background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+    min-height: 374px; /* на случай, если будет всего один элемент в списке */
   }
 
   .programs__container {
