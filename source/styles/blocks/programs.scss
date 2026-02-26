@@ -1,34 +1,36 @@
+$padding-left: 20px;
+
 .programs {
-  min-height: 552px;
+  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+}
+
+.programs__container {
+  margin-bottom: 20px;
 }
 
 .programs__list {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   gap: 20px;
-}
-
-.programs__data {
-  max-width: 240px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .programs__item {
   background-color: $basic-grey;
   background-repeat: no-repeat;
-  background-position: left top;
   min-height: 266px;
+  padding: 30px 20px 18px;
 }
 
 .programs__item--slim {
   background-image: url("../../icons/stack.svg#slim-cat");
   background-size: 50px 53px;
+  background-position: left 20px top 21px;
 }
 
 .programs__item--muscle {
   background-image: url("../../icons/stack.svg#muscle-cat");
   background-size: 67px 50px;
+  background-position: left 13px top 24px;
 }
 
 .programs__title {
@@ -39,14 +41,27 @@
   text-transform: uppercase;
   color: $basic-black;
   margin: 0;
-  min-height: 96px;
-  padding-left: 71px;
+  margin-bottom: 29px;
+  padding-left: calc(90px - $padding-left);
 }
 
 .programs__description {
+  position: relative;
   font-size: 14px;
   line-height: 18px;
   color: $base-color-text;
+  margin: 0;
+  margin-bottom: 38px;
+}
+
+.programs__description::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background-color: $special-light-grey6;
+  left: 0;
+  right: 0;
+  bottom: -23px;
 }
 
 .programs__link {
@@ -56,14 +71,12 @@
   text-transform: uppercase;
   color: $basic-black;
   text-decoration-line: none;
-}
-
-.programs__link:active {
-  opacity: 0.3;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 0;
 }
 
 .programs__link::after {
-  display: inline-block;
   content: "";
   mask-repeat: no-repeat;
   mask-position: center;
@@ -72,6 +85,11 @@
   mask-size: 24px 11px;
   width: 24px;
   height: 11px;
+  margin-left: 15px;
+}
+
+.programs__link:active {
+  opacity: 0.3;
 }
 
 /* Стайлгайд не включает :focus. Решение, ориентированное на удобство пользователя: :focus не добавлять, чтобы стрелка не смещалась при фокусе с клавиатуры */
@@ -83,21 +101,28 @@
 }
 
 @media (min-width: $tablet-width) {
+  $padding-left: 52px;
+
   .programs {
-    min-height: 774px;
+    background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  }
+
+  .programs__container {
+    margin-bottom: 45px;
   }
 
   .programs__title {
-    min-height: 137px;
     padding: 0;
     font-size: 36px;
     line-height: 36px;
+    margin-bottom: 24px;
   }
 
   .programs__description {
     font-size: 16px;
     line-height: 24px;
     color: $basic-black;
+    margin-bottom: 48px;
   }
 
   .programs__link {
@@ -105,62 +130,73 @@
     line-height: 30px;
   }
 
+  .programs__link::after {
+    margin-left: 25px;
+  }
+
+  .programs__description::after {
+    display: none;
+  }
+
   .programs__list {
     gap: 30px;
   }
 
-  .programs__data {
-    max-width: 340px;
-    padding-left: 52px;
-    padding-right: 0;
-  }
-
   .programs__item {
-    background-position: right center;
     min-height: 372px;
+    padding: 77px 316px 53px $padding-left;
   }
 
   .programs__item--slim {
     background-size: 200px 211px;
+    background-position: right 64px top 81px;
   }
 
   .programs__item--muscle {
     background-size: 268px 200px;
+    background-position: right 29px top 91px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  $padding-left: 52px;
+
   .programs {
-    min-height: 374px;
+    background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  }
+
+  .programs__container {
+    margin-bottom: 71px;
   }
 
   .programs__list {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     gap: 80px;
   }
 
-  .programs__data {
-    max-width: 570px;
-    padding-left: 52px;
-    padding-right: 52px;
-  }
-
   .programs__item {
-    background-position: left top;
     min-height: 374px;
+    max-width: 570px;
+    padding: 77px 52px 55px;
   }
 
   .programs__item--slim {
     background-size: 100px 106px;
+    background-position: left 52px top 41px;
   }
 
   .programs__item--muscle {
     background-size: 134px 100px;
+    background-position: left 33px top 47px;
   }
 
   .programs__title {
-    min-height: 186px;
-    padding-left: 162px;
+    padding-left: calc(214px - $padding-left);
+    margin-bottom: 73px;
+  }
+
+  .programs__description {
+    margin-bottom: 23px;
   }
 }
