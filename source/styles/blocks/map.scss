@@ -1,17 +1,11 @@
 .map {
   display: block;
+  border: none;
+  width: 100wv;
 }
 
 @media (min-width: $tablet-width) {
   .map {
-    width: $tablet-width;
-    height: 400px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .map {
-    width: $desktop-width;
     height: 400px;
   }
 }
