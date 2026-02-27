@@ -1,5 +1,6 @@
 .instructions {
   min-height: 140px; /* на случай, если будет всего один элемент в списке */
+  padding-bottom: 49px;
 }
 
 .instructions__title {
@@ -16,7 +17,6 @@
   display: flex;
   flex-flow: column wrap;
   gap: 20px;
-  padding-bottom: 49px;
 }
 
 .instructions__item {
@@ -53,6 +53,8 @@
 
   .instructions {
     min-height: 372px; /* на случай, если будет всего один элемент в списке */
+    border-bottom: 1px solid $special-light-grey7;
+    padding-bottom: 47px;
   }
 
   .instructions__title {
@@ -128,8 +130,12 @@
 }
 
 @media (min-width: $desktop-width) {
+  $item-width: 250px;
+
   .instructions {
     min-height: 372px;
+    border-bottom: none;
+    padding-bottom: 0;
   }
 
   .instructions__container {
@@ -137,29 +143,23 @@
   }
 
   .instructions__list {
-    display: flex;
-    flex-direction: row;
-    gap: 0;
+    grid-template-columns: $item-width $item-width $item-width $item-width;
+    gap: 37px 75px;
   }
 
   .instructions__item--nutrients {
     background-image: url("../../icons/stack.svg#nutrients-desktop");
-    margin-right: 97px;
   }
 
   .instructions__item--preparation {
     background-image: url("../../icons/stack.svg#preparation-desktop");
-    margin-right: 79px;
   }
 
   .instructions__item--replacement {
     background-image: url("../../icons/stack.svg#replacement-desktop");
-    min-width: 248px;
-    margin-right: 77px;
   }
 
   .instructions__item--progress {
     background-image: url("../../icons/stack.svg#progress-desktop");
-    min-width: 250px;
   }
 }
