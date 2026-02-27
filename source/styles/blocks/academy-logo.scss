@@ -1,6 +1,9 @@
 .academy-logo {
   text-decoration-line: none;
-  display: inline-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .academy-logo::after {
@@ -29,4 +32,15 @@
   font-size: 16px;
   line-height: 20px;
   color: $base-color-text;
+}
+
+@media (min-width: $tablet-width) {
+  .academy-logo {
+    justify-content: start;
+    width: auto;
+  }
+
+  .academy-logo::after {
+    margin-left: 23px;
+  }
 }

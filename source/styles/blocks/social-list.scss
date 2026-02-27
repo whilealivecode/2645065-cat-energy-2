@@ -1,6 +1,13 @@
 .social-list {
   display: flex;
   gap: 24px;
+  border-top: 1px solid $special-light-grey6;
+  border-bottom: 1px solid $special-light-grey6;
+  flex-flow: row wrap;
+  padding: 20px 0;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .social-list__item {
@@ -11,7 +18,7 @@
   position: relative;
   width: 28px;
   height: 22px;
-  display: inline-flex;
+  display: flex;
 }
 
 .social-list__link::before {
@@ -48,4 +55,16 @@
 
 .social-list__link--telegram::before {
   mask-image: url("../../icons/stack.svg#telegram");
+}
+
+@media (min-width: $tablet-width) {
+  .social-list {
+    border: none;
+    margin-bottom: 0;
+    padding: 0;
+    margin-right: auto;
+    min-width: 132px;
+    max-width: 184px;
+    justify-content: start;
+  }
 }
