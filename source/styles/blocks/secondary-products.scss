@@ -11,6 +11,19 @@
   color: $basic-black;
   margin: 0;
   margin-bottom: 36px;
+  position: relative;
+}
+
+.secondary-products__title::after {
+  content: "";
+  background-color: $basic-green;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  margin-left: 40px;
+  width: 35px;
+  transform: translateY(-50%);
 }
 
 .secondary-products__addons {
@@ -60,6 +73,6 @@
 
   .secondary-products__container {
     display: grid;
-    grid-template: "title title" auto "addons gift" auto / auto auto;
+    grid-template: "title title" "addons gift";
   }
 }
