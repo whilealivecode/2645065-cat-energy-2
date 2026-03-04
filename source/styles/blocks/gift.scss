@@ -1,12 +1,38 @@
 .gift {
   text-align: center;
-  background-color: $basic-green;
+  /* background-color: $basic-green; */
   background-repeat: no-repeat;
   background-position: top 59px center;
   background-image: url("../../icons/stack.svg#gift");
   background-size: 78px 81px;
   min-height: 290px;
-  padding-top: 187px;
+  padding: 187px 58px 20px;
+  position: relative;
+}
+
+.gift::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: top left;
+  background-image: url("../../images/mobile/1x/gift-background-mobile@1x.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.gift::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(104, 183, 56, 0.85);
+  z-index: -1;
 }
 
 .gift__text {
