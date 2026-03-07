@@ -10,7 +10,7 @@
 .contacts__container {
   width: $mobile-width;
   margin: 0 auto;
-  padding: 26px 20px;
+  padding: 26px $side-padding-mobile;
 }
 
 .contacts__data {

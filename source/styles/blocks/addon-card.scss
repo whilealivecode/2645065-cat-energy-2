@@ -1,9 +1,9 @@
 .addon-card {
   display: grid;
-  grid-template: "title title" "quantity price" "button button";
-  min-height: 130px;
+  grid-template: "title title" "quantity price" "button button" / 1fr auto;
+  max-height: 130px;
   border-bottom: 1px solid $special-light-grey3;
-  padding-top: 14px;
+  padding: 13px 0 18px;
   align-content: start;
 }
 

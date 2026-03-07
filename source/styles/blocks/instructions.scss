@@ -143,7 +143,7 @@
   }
 
   .instructions__list {
-    grid-template-columns: $item-width $item-width $item-width $item-width;
+    grid-template-columns: repeat(4, $item-width);
     gap: 37px 75px;
   }
 
