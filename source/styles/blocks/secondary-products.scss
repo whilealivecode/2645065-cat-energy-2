@@ -2,6 +2,10 @@
   position: relative;
 }
 
+.secondary-products__gift {
+  margin-bottom: 40px;
+}
+
 .secondary-products__title {
   font-family: $secondary-font;
   font-weight: 400;
@@ -11,7 +15,7 @@
   color: $basic-black;
   margin: 0;
   margin-bottom: 35px;
-  margin-left: calc(20px + $container-margin-mobile);
+  margin-left: calc($side-padding-mobile + $container-margin-mobile);
 }
 
 .secondary-products__title::before {
@@ -39,16 +43,20 @@
 }
 
 @media (min-width: $tablet-width) {
+  .secondary-products__gift {
+    margin-bottom: 80px;
+  }
+
   .secondary-products__title {
     font-size: 32px;
     line-height: 32px;
     margin-bottom: 82px;
-    margin-left: calc(30px + 40px + $container-margin-tablet);
+    margin-left: calc($side-padding-tablet + 40px + $container-margin-tablet);
   }
 
   .secondary-products__title::before {
     top: 14px;
-    right: calc(100% - $container-margin-tablet - 30px);
+    right: calc(100% - $container-margin-tablet - $side-padding-tablet);
   }
 
   .secondary-products__title::after {
@@ -67,7 +75,7 @@
     line-height: 40px;
     grid-area: title;
     margin-bottom: 80px;
-    margin-left: calc(110px + $container-margin-desktop);
+    margin-left: calc($side-padding-desktop + $container-margin-desktop);
   }
 
   .secondary-products__title::before {
@@ -88,6 +96,7 @@
 
   .secondary-products__gift {
     grid-area: gift;
+    margin-bottom: 96px;
   }
 
   .secondary-products__container {
