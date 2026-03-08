@@ -28,14 +28,13 @@
   grid-area: quantity;
   font-size: 14px;
   line-height: 14px;
-  margin-bottom: 15px;
+  text-align: left;
 }
 
 .addon-card__price {
   grid-area: price;
   font-size: 14px;
   line-height: 14px;
-  margin-bottom: 15px;
   text-align: right;
 }
 
@@ -51,37 +50,57 @@
   .addon-card {
     border-left: 1px solid $special-light-grey3;
     border-right: 1px solid $special-light-grey3;
-    grid-template: "title quantity price" "button button button";
+    grid-template: "title quantity price" "button button button" / 1fr auto 93px;
     min-height: 139px;
-    padding-bottom: 28px;
-    padding-left: 36px;
-    padding-right: 36px;
+    padding: 24px 37px 28px;
+    min-height: 139px;
   }
 
   .addon-card__title {
     font-size: 20px;
     line-height: 20px;
+    margin-left: 1px;
+    margin-bottom: 25px;
   }
 
   .addon-card__quantity {
     font-size: 16px;
     line-height: 20px;
+    margin-top: 2px;
+    margin-right: 1px;
+    text-align: right;
   }
 
   .addon-card__price {
     font-size: 16px;
     line-height: 20px;
+    margin-top: 2px;
+    margin-right: 3px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .addon-card {
-    display: grid;
-    grid-template: "title quantity price button" / 326px auto 82px 245px;
-    min-height: 72px;
-    border-bottom: 1px solid $special-light-grey3;
     border-left: none;
     border-right: none;
+    border-bottom: 1px solid $special-light-grey3;
+    grid-template: "title quantity price button" / 325px auto 82px 244px;
+    min-height: 72px;
     padding: 0;
+  }
+
+  .addon-card__title {
+    margin-top: 25px;
+  }
+
+  .addon-card__quantity,
+  .addon-card__price {
+    text-align: left;
+    margin-top: 28px;
+  }
+
+  .addon-card__button {
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 }

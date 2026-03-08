@@ -5,3 +5,15 @@
 .primary-products__container {
   margin-bottom: 26px;
 }
+
+@media (min-width: $tablet-width) {
+  .primary-products__container {
+    margin-bottom: 74px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .primary-products__container {
+    margin-bottom: 71px;
+  }
+}

@@ -42,7 +42,7 @@
   .secondary-products__title {
     font-size: 32px;
     line-height: 32px;
-    margin-bottom: 80px;
+    margin-bottom: 82px;
     margin-left: calc(30px + 40px + $container-margin-tablet);
   }
 
@@ -57,7 +57,7 @@
   }
 
   .secondary-products__addons {
-    margin-bottom: 70px;
+    margin-bottom: 68px;
   }
 }
 
@@ -66,6 +66,7 @@
     font-size: 40px;
     line-height: 40px;
     grid-area: title;
+    margin-bottom: 80px;
     margin-left: calc(110px + $container-margin-desktop);
   }
 
@@ -75,14 +76,14 @@
   }
 
   .secondary-products__title::after {
-    margin-left: 40px;
     top: 18px;
+    margin-left: 40px;
   }
 
   .secondary-products__addons {
     grid-area: addons;
     margin-bottom: 0;
-    margin-right: 80px;
+    margin-right: 81px;
   }
 
   .secondary-products__gift {

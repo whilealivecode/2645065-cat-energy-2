@@ -310,7 +310,20 @@
           <p class="address__city">Санкт-Петербург</p>
         </address>
       </div>
-      <iframe class="map" src="https://yandex.ru/map-widget/v1/?ll=30.323036%2C59.938631&z=16&pt=30.323037%2C59.938631&controls=0" width="100%" height="362" allowfullscreen title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"></iframe>
+      <object class="map map--interactive" type="text/html" data="https://yandex.ru/map-widget/v1/?ll=30.323036%2C59.938631&z=16&pt=30.323037%2C59.938631&controls=0" width="100%" height="362" allowfullscreen title="Офис компании HTML Academy по адресу: набережная реки Карповки, 5, литера П, Санкт-Петербург.">
+        <!-- Резервное изображение, если интерактивная карта не загрузится -->
+        <picture>
+          <source type="image/png" media="(min-width: 1440px)" srcset="images/desktop/1x/map-desktop@1x.png, images/desktop/2x/map-desktop@2x.png 2x">
+          <source type="image/png" media="(min-width: 768px)" srcset="images/tablet/1x/map-tablet@1x.png, images/tablet/2x/map-tablet@2x.png 2x">
+          <img class="map map--fallback" src="images/mobile/1x/map-mobile@1x.png" srcset="images/mobile/2x/map-mobile@2x.png 2x" width="320" height="362" alt="Офис компании HTML Academy по адресу: набережная реки Карповки, 5, литера П, Санкт-Петербург.">
+        </picture>
+      </object>
+      <!-- Резервное изображение, если <object> не отобразится -->
+      <picture>
+        <source type="image/png" media="(min-width: 1440px)" srcset="images/desktop/1x/map-desktop@1x.png, images/desktop/2x/map-desktop@2x.png 2x">
+        <source type="image/png" media="(min-width: 768px)" srcset="images/tablet/1x/map-tablet@1x.png, images/tablet/2x/map-tablet@2x.png 2x">
+        <img class="map map--fallback" src="images/mobile/1x/map-mobile@1x.png" srcset="images/mobile/2x/map-mobile@2x.png 2x" width="320" height="362" alt="Офис компании HTML Academy по адресу: набережная реки Карповки, 5, литера П, Санкт-Петербург.">
+      </picture>
     </section>
   </main>
 
@@ -351,6 +364,8 @@
       </a>
     </div>
   </footer>
+
+  <script src="scripts/index.js"></script>
 </body>
 
 </html>
