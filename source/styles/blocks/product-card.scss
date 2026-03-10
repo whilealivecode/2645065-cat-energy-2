@@ -16,8 +16,6 @@
 }
 
 .product-card__title-link {
-  margin-top: 2px;
-  margin-left: 1px;
   text-decoration-line: none;
   grid-area: title;
 }
@@ -55,6 +53,8 @@
   text-transform: uppercase;
   color: $special-dark-grey;
   margin: 0;
+  margin-top: 2px;
+  margin-left: 1px;
   max-width: 80px;
 }
 
@@ -114,15 +114,6 @@
     justify-self: center;
   }
 
-  .product-card__title-link {
-    margin-top: 1px;
-    margin-left: -2px;
-  }
-
-  .product-card__title-extra {
-    margin-left: 4px;
-  }
-
   .product-card__spec {
     font-size: 16px;
     line-height: 20px;
@@ -135,6 +126,12 @@
     max-width: 140px;
     text-align: center;
     justify-self: center;
+    margin-top: 1px;
+    margin-left: -2px;
+  }
+
+  .product-card__title-extra {
+    margin-left: 4px;
   }
 }
 
@@ -159,5 +156,6 @@
 
   .product-card__title {
     max-width: 140px;
+    margin-left: -3px;
   }
 }

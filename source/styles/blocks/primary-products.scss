@@ -1,6 +1,5 @@
 .primary-products {
   overflow-X: hidden;
-  padding-top: 81px;
 }
 
 .primary-products__container {
@@ -10,6 +9,7 @@
 @media (min-width: $tablet-width) {
   .primary-products__container {
     margin-bottom: 74px;
+    padding-top: 81px;
   }
 }
 
