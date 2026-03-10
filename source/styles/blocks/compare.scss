@@ -1,7 +1,3 @@
-.compare {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
-}
-
 .compare__images {
   display: flex;
   position: relative;
@@ -115,6 +111,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .compare {
+    align-self: center;
+  }
+
   .compare__images,
   .compare__image {
     width: 560px;
@@ -125,3 +125,4 @@
     height: 512px;
   }
 }
+

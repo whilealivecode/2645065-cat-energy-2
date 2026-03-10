@@ -30,7 +30,7 @@ $padding-left: 20px;
 .programs__item--muscle {
   background-image: url("../../icons/stack.svg#muscle-cat");
   background-size: 67px 50px;
-  background-position: left 13px top 24px;
+  background-position: left 12px top 24px;
 }
 
 .programs__title {
@@ -74,6 +74,7 @@ $padding-left: 20px;
   display: inline-flex;
   align-items: center;
   padding: 4px 0;
+  margin-left: 1px;
 }
 
 .programs__link::after {
@@ -85,7 +86,7 @@ $padding-left: 20px;
   mask-size: 24px 11px;
   width: 24px;
   height: 11px;
-  margin-left: 15px;
+  margin-left: 16px;
 }
 
 .programs__link:active {

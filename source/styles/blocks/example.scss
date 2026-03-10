@@ -1,9 +1,11 @@
 .example {
   background-color: $special-light-grey;
+  padding-top: 25px;
+  padding-bottom: 40px;
+  min-height: 659px;
 }
 
 .example__container {
-  min-height: 659px;
   display: flex;
   flex-direction: column;
 }
@@ -19,11 +21,14 @@
   line-height: 40px;
   color: $basic-black;
   margin: 0;
+  margin-bottom: 40px;
 }
 
 .example__description {
   font-size: 14px;
   line-height: 18px;
+  margin: 0;
+  margin-bottom: 4px;
 }
 
 .example__data {
@@ -34,11 +39,19 @@
 .example__stats {
   display: flex;
   flex-direction: row;
-  gap: 32px;
+  justify-content: space-between;
 }
 
 .example__group {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  width: 124px;
+  height: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid $special-light-grey3;
+  padding-top: 13px;
+  margin-bottom: 19px;
+  border-radius: 3px;
 }
 
 .example__term {
@@ -47,6 +60,7 @@
   line-height: 24px;
   text-align: center;
   color: $basic-black;
+  margin-bottom: 8px;
 }
 
 .example__definition {
@@ -54,12 +68,18 @@
   line-height: 12px;
   text-align: center;
   margin: 0;
+  max-width: 88px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: $special-light-grey;
 }
 
 .example__costs {
   display: flex;
   flex-direction: row;
   gap: 3px;
+  margin-bottom: 19px;
+  justify-content: center;
 }
 
 .example__label {
@@ -81,52 +101,76 @@
 @media (min-width: $tablet-width) {
   .example {
     background-image: linear-gradient(to bottom, $basic-white 619px, $special-light-grey 619px);
+    padding-top: 45px;
+    padding-bottom: 101px;
   }
 
   .example__container {
-    min-height: 1081px;
+    max-height: 1081px;
   }
 
   .example__title {
     font-size: 60px;
     line-height: 60px;
+    margin-bottom: 60px;
   }
 
   .example__description {
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 55px;
+  }
+
+  .example__group {
+    width: 162px;
+    height: 72px;
+    padding-top: 15px;
   }
 
   .example__term {
     font-size: 30px;
     line-height: 37px;
+    margin-bottom: 11px;
   }
 
   .example__definition {
     font-size: 14px;
     line-height: 14px;
+    max-width: 145px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: $basic-white;
   }
 
   .example__label {
     font-size: 20px;
+    margin-right: 2px;
   }
 
   .example__value {
     font-size: 20px;
+    margin-top: 1px;
+    margin-right: 1px;
   }
 
   .example__data {
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 87px;
   }
 
   .example__stats {
-    flex-direction: row;
     gap: 43px;
+    margin: 0;
   }
 
   .example__costs {
     flex-direction: column;
+    text-align: right;
+    gap: 9px;
+    padding-top: 11px;
+    margin: 0;
+    justify-content: start;
   }
 }
 
