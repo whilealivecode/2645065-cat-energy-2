@@ -1,5 +1,6 @@
 .primary-products {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  overflow-X: hidden;
+  padding-top: 81px;
 }
 
 .primary-products__container {

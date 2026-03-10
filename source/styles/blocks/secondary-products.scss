@@ -16,6 +16,7 @@
   margin: 0;
   margin-bottom: 35px;
   margin-left: calc($side-padding-mobile + $container-margin-mobile);
+  display: flex;
 }
 
 .secondary-products__title::before {
@@ -32,10 +33,9 @@
   content: "";
   background-color: $basic-green;
   height: 2px;
-  position: absolute;
-  width: 100%;
+  flex: 1;
   margin-left: 40px;
-  top: 10px;
+  margin-top: 10px;
 }
 
 .secondary-products__addons {
@@ -60,7 +60,7 @@
   }
 
   .secondary-products__title::after {
-    top: 14px;
+    margin-top: 14px;
     margin-left: 40px;
   }
 
@@ -84,7 +84,7 @@
   }
 
   .secondary-products__title::after {
-    top: 18px;
+    margin-top: 18px;
     margin-left: 40px;
   }
 
