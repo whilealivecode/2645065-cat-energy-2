@@ -16,21 +16,55 @@ $padding-left: 20px;
 
 .programs__item {
   background-color: $basic-grey;
-  background-repeat: no-repeat;
   min-height: 266px;
   padding: 30px 20px 18px;
+  position: relative;
 }
 
-.programs__item--slim {
+.programs__item--slim::before {
+  position: absolute;
+  content: "";
   background-image: url("../../icons/stack.svg#slim-cat");
-  background-size: 50px 53px;
-  background-position: left 20px top 21px;
+  background-size: 36px 50px;
+  top: 21px;
+  left: 27px;
+  width: 36px;
+  height: 50px;
+  z-index: 1;
+  background-repeat: no-repeat;
 }
 
-.programs__item--muscle {
+.programs__item--muscle::before {
+  position: absolute;
+  content: "";
   background-image: url("../../icons/stack.svg#muscle-cat");
-  background-size: 67px 50px;
-  background-position: left 12px top 24px;
+  background-size: 67px 28px;
+  top: 35px;
+  left: 13px;
+  width: 67px;
+  height: 28px;
+  z-index: 1;
+  background-repeat: no-repeat;
+}
+
+.programs__item--slim::after,
+.programs__item--muscle::after {
+  position: absolute;
+  content: "";
+  background-color: $basic-green;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.programs__item--slim::after {
+  top: 24px;
+  left: 20px;
+}
+
+.programs__item--muscle::after {
+  top: 24px;
+  left: 21px;
 }
 
 .programs__title {
@@ -117,6 +151,7 @@ $padding-left: 20px;
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 24px;
+    margin-left: 1px;
   }
 
   .programs__description {
@@ -132,7 +167,7 @@ $padding-left: 20px;
   }
 
   .programs__link::after {
-    margin-left: 25px;
+    margin-left: 27px;
   }
 
   .programs__description::after {
@@ -148,14 +183,33 @@ $padding-left: 20px;
     padding: 77px 316px 53px $padding-left;
   }
 
-  .programs__item--slim {
-    background-size: 200px 211px;
-    background-position: right 64px top 81px;
+  .programs__item--slim::before {
+    background-size: 140px 194px;
+    top: 81px;
+    left: 475px;
+    width: 140px;
+    height: 194px;
   }
 
-  .programs__item--muscle {
-    background-size: 268px 200px;
-    background-position: right 29px top 91px;
+  .programs__item--muscle::before {
+    background-size: 268px 112px;
+    top: 135px;
+    left: 411px;
+    width: 268px;
+    height: 112px;
+  }
+
+  .programs__item--slim::after,
+  .programs__item--muscle::after {
+    width: 200px;
+    height: 200px;
+    left: 445px;
+    top: 92px;
+  }
+
+  .programs__item--muscle::after {
+    left: 445px;
+    top: 91px;
   }
 }
 
@@ -182,22 +236,47 @@ $padding-left: 20px;
     padding: 77px 52px 55px;
   }
 
-  .programs__item--slim {
-    background-size: 100px 106px;
-    background-position: left 52px top 41px;
-  }
-
-  .programs__item--muscle {
-    background-size: 134px 100px;
-    background-position: left 33px top 47px;
-  }
-
   .programs__title {
-    padding-left: calc(214px - $padding-left);
+    padding-left: calc(212px - $padding-left);
     margin-bottom: 73px;
   }
 
   .programs__description {
     margin-bottom: 23px;
+    margin-left: 0;
+  }
+
+  .programs__item--slim::before {
+    background-size: 70px 97px;
+    left: 66px;
+    top: 41px;
+    width: 70px;
+    height: 97px;
+  }
+
+  .programs__item--muscle::before {
+    background-size: 134px 56px;
+    left: 32px;
+    top: 67px;
+    width: 134px;
+    height: 56px;
+  }
+
+  .programs__item--slim::after,
+  .programs__item--muscle::after {
+    width: 100px;
+    height: 100px;
+    left: 51px;
+    top: 47px;
+  }
+
+  .programs__item--muscle::after {
+    left: 51px;
+    top: 47px;
+  }
+
+  .programs__link {
+    margin-left: 0;
   }
 }
+

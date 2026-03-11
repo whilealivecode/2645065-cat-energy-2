@@ -10,10 +10,6 @@
   flex-direction: column;
 }
 
-.example__compare {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
-}
-
 .example__title {
   font-family: $secondary-font;
   font-weight: 400;
@@ -103,16 +99,14 @@
     background-image: linear-gradient(to bottom, $basic-white 619px, $special-light-grey 619px);
     padding-top: 45px;
     padding-bottom: 101px;
-  }
-
-  .example__container {
-    max-height: 1081px;
+    min-height: 1081px;
   }
 
   .example__title {
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 60px;
+    margin-left: 1px;
   }
 
   .example__description {
@@ -140,6 +134,7 @@
     padding-left: 10px;
     padding-right: 10px;
     background-color: $basic-white;
+    margin-right: 2px;
   }
 
   .example__label {
@@ -156,7 +151,7 @@
   .example__data {
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 87px;
+    margin-bottom: 85px;
   }
 
   .example__stats {
@@ -177,31 +172,39 @@
 @media (min-width: $desktop-width) {
   .example {
     background-image: linear-gradient(to bottom, $basic-white 136px, $special-light-grey 136px);
+    padding-top: 0;
+    padding-bottom: 75px;
+    min-height: 598px;
   }
 
   .example__container {
-    min-height: 598px;
     display: grid;
     column-gap: 224px;
-    grid-template: "title compare" auto "description compare" auto "data compare" auto / 436px 560px;
+    grid-template: "title compare" 206px "description compare" auto "data compare" auto / 435px 560px;
   }
 
   .example__stats {
-    gap: 42px;
+    gap: 41px;
+    justify-content: start;
   }
 
   .example__title {
     grid-area: title;
+    margin-bottom: 130px;
+    margin-left: 0;
   }
 
   .example__description {
     grid-area: description;
+    margin-bottom: 69px;
   }
 
   .example__data {
     grid-area: data;
     flex-direction: column;
     justify-content: start;
+    row-gap: 30px;
+    margin-bottom: 0;
   }
 
   .example__compare {
@@ -210,6 +213,19 @@
 
   .example__costs {
     flex-direction: row;
-    gap: 63px;
+    gap: 62px;
+  }
+
+  .example__definition {
+    background-color: $special-light-grey;
+  }
+
+  .example__label {
+    letter-spacing: 0.1px;
+  }
+
+  .example__value {
+    margin-right: 1px;
   }
 }
+

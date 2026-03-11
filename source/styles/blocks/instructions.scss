@@ -9,9 +9,7 @@
   font-size: 36px;
   line-height: 40px;
   color: $basic-black;
-  margin: 0;
-  margin-bottom: 40px;
-  margin-left: 1px;
+  margin: 0 0 40px 1px;
 }
 
 .instructions__list {
@@ -55,7 +53,7 @@
   .instructions {
     min-height: 372px; /* на случай, если будет всего один элемент в списке */
     border-bottom: 1px solid $special-light-grey7;
-    padding-bottom: 47px;
+    padding-bottom: 46px;
   }
 
   .instructions__title {
@@ -131,7 +129,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  $item-width: 250px;
+  $item-width: 249px;
 
   .instructions {
     min-height: 372px;
@@ -162,5 +160,9 @@
 
   .instructions__item--progress {
     background-image: url("../../icons/stack.svg#progress-desktop");
+  }
+
+  .instructions__title {
+    margin-left: 0;
   }
 }

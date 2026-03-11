@@ -126,3 +126,8 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .compare {
+    align-self: start;
+  }
+}
