@@ -1,12 +1,45 @@
 .hero {
-  background-image: linear-gradient(to bottom, $basic-green 63%, $basic-white 63%, $basic-white 100%);
+  background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 63%, $basic-white 63%, $basic-white 100%);
   font-family: $secondary-font;
   color: $basic-white;
   min-height: 480px;
+  padding-top: 27px;
+  position: relative;
 }
 
 .hero__container {
   margin-bottom: 20px;
+}
+
+.hero::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: top center;
+  background-image: url("../../images/mobile/1x/hero-background-mobile@1x.jpg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.hero::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 63%;
+  background-image: linear-gradient(to right, #504f54 40%, #404044 60%, #424146 100%);
+  z-index: -2;
+}
+
+@media (min-resolution: 2dppx) {
+  .hero::before {
+    background-image: url("../../images/mobile/2x/hero-background-mobile@2x.jpg");
+  }
 }
 
 .hero__link {
@@ -21,17 +54,23 @@
   line-height: 36px;
   text-align: center;
   margin: 0;
+  margin-bottom: 25px;
+  margin-left: 2px;
 }
 
 .hero__slogan {
   font-size: 14px;
   line-height: 14px;
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
+  margin: 0;
+  margin-left: 40px;
+  margin-bottom: 29px;
 }
 
 .hero__image {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  display: block;
+  margin-bottom: 3px;
 }
 
 @media (min-width: $tablet-width) {
@@ -54,6 +93,7 @@
     height: 609px;
     position: absolute;
     z-index: 1;
+    top: 266px;
   }
 
   .hero__title {
@@ -61,6 +101,7 @@
     line-height: 60px;
     text-align: left;
     margin-left: 90px;
+    margin-bottom: 40px;
     max-width: 420px;
     padding-top: 65px;
   }
@@ -70,6 +111,7 @@
     line-height: 20px;
     text-align: left;
     margin-left: 90px;
+    margin-bottom: 50px;
   }
 
   .hero__link {
