@@ -7,7 +7,7 @@
   position: relative;
 }
 
-.hero__container {
+.hero--margin-bottom {
   margin-bottom: 20px;
 }
 
@@ -20,7 +20,7 @@
   height: 100%;
   background-position: top center;
   background-image: url("../../images/mobile/1x/hero-background-mobile@1x.jpg");
-  background-size: auto;
+  background-size: $mobile-width 302px;
   background-repeat: no-repeat;
   z-index: -1;
 }
@@ -76,16 +76,19 @@
 @media (min-width: $tablet-width) {
   .hero {
     background-image: none;
-    background-color: $basic-white;
     font-family: $secondary-font;
     color: $basic-black;
     min-height: 875px;
+    position: relative;
   }
 
-  .hero__container {
-    margin-bottom: 0;
-    position: relative;
-    min-height: 875px;
+  .hero::before,
+  .hero::after {
+    display: none;
+  }
+
+  .hero--margin-bottom {
+    margin-bottom: 27px;
   }
 
   .hero__image {
@@ -93,7 +96,7 @@
     height: 609px;
     position: absolute;
     z-index: 1;
-    top: 266px;
+    top: 293px;
   }
 
   .hero__title {
@@ -128,31 +131,55 @@
 @media (min-width: $desktop-width) {
   .hero {
     min-height: 694px;
-    background-image: linear-gradient(to right, $basic-white 50%, $basic-green 50%, $basic-green 100%);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85) 100%);
+    overflow: hidden;
   }
 
-  .hero__container {
+  .hero::before {
+    display: block;
+    background-position: right top;
+    background-image: url("../../images/desktop/1x/hero-background-desktop@1x.jpg");
+    background-size: 1041px 694px;
+    z-index: -1;
+    transform: translateX(336px);
+  }
+
+  @media (min-resolution: 2dppx) {
+    .hero::before {
+      background-image: url("../../images/desktop/2x/hero-background-desktop@2x.jpg");
+    }
+  }
+
+
+  .hero::after {
+    display: block;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, #4e4d51 50%, #4e4d51 100%);
+    z-index: -2;
+  }
+
+  .hero--margin-bottom {
     margin-bottom: 82px;
-    min-height: 694px;
   }
 
   .hero__image {
     width: 552px;
     height: 499px;
     top: 143px;
-    left: calc(50% - 165px);
+    left: calc(50% - 164px);
   }
 
   .hero__title {
-    margin-left: 80px;
-    padding-top: 224px;
+    margin-left: 79px;
+    padding-top: 197px;
   }
 
   .hero__slogan {
-    margin-left: 80px;
+    margin-left: 79px;
+    margin-bottom: 52px;
   }
 
   .hero__link {
-    margin-left: 80px;
+    margin-left: 79px;
   }
 }
