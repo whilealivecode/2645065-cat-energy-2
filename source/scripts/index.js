@@ -6,3 +6,14 @@ const mapFallback = document.querySelectorAll('.map--fallback')[1];
 mapInteractive.style.display = 'block';
 mapFallback.style.display = 'none';
 
+
+const mainNavList = document.querySelector('.main-navigation__list');
+const mainNavToggle = document.querySelector('.main-navigation__toggle');
+mainNavToggle.style.display = 'block';
+
+mainNavToggle.addEventListener('click', () => {
+  mainNavList.classList.toggle('main-navigation__list--hidden');
+  mainNavToggle.classList.toggle('main-navigation__toggle--closed');
+});
+
+

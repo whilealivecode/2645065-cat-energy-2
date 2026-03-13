@@ -78,8 +78,9 @@
     background-image: none;
     font-family: $secondary-font;
     color: $basic-black;
-    min-height: 875px;
+    min-height: 810px;
     position: relative;
+    padding-top: 0;
   }
 
   .hero::before,
@@ -88,7 +89,7 @@
   }
 
   .hero--margin-bottom {
-    margin-bottom: 27px;
+    margin-bottom: 0;
   }
 
   .hero__image {
@@ -96,7 +97,7 @@
     height: 609px;
     position: absolute;
     z-index: 1;
-    top: 293px;
+    top: 201px;
   }
 
   .hero__title {
@@ -106,7 +107,6 @@
     margin-left: 90px;
     margin-bottom: 40px;
     max-width: 420px;
-    padding-top: 65px;
   }
 
   .hero__slogan {
@@ -150,7 +150,6 @@
     }
   }
 
-
   .hero::after {
     display: block;
     height: 100%;
@@ -171,12 +170,13 @@
 
   .hero__title {
     margin-left: 79px;
-    padding-top: 197px;
+    padding-top: 224px;
   }
 
   .hero__slogan {
     margin-left: 79px;
     margin-bottom: 52px;
+    display: inline-block;
   }
 
   .hero__link {
