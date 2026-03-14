@@ -31,10 +31,6 @@
   opacity: 0.6;
 }
 
-.main-navigation__logo-image {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
-}
-
 .main-navigation__logo-image--catalog {
   background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
@@ -64,10 +60,6 @@
   border-bottom: 1px solid $special-light-grey7;
 }
 
-.main-navigation__item--current {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
-}
-
 .main-navigation__link {
   font-family: $secondary-font;
   font-size: 20px;
@@ -95,19 +87,24 @@
   cursor: pointer;
   background-repeat: no-repeat;
   background-position: center;
-  transform: translate(4px, 9px);
+  background-size: 24px 20px;
 }
 
 .main-navigation__toggle {
   background-image: url("../../icons/stack.svg#close");
-  background-size: 19px 20px;
-  display: none;
+  transform: translate(-1px, 8px);
+  display: none; /* По умолчанию (JS отключён) кнопка скрыта */
 }
 
 .main-navigation__toggle--closed {
   background-image: url("../../icons/stack.svg#hamburger");
-  background-size: 24px 18px;
-  display: none;
+  transform: translate(4px, 9px);
+  display: block;
+}
+
+/* При включённом JS (класс .js на body) показываем кнопку */
+.js .main-navigation__toggle {
+  display: block;
 }
 
 .main-navigation__toggle:hover,
@@ -129,7 +126,6 @@
 
 @media (min-width: $tablet-width) {
   .main-navigation {
-    display: flex;
     justify-content: space-between;
     flex-direction: row;
     min-height: 75px;
@@ -142,6 +138,7 @@
 
   .main-navigation__wrapper {
     align-items: center;
+    padding: 0;
   }
 
   .main-navigation__logo-image {
@@ -153,18 +150,27 @@
     display: flex;
     flex-wrap: wrap;
     align-items: start;
-    max-width: 440px;
+    min-width: 440px;
     padding-top: 25px;
     column-gap: 34px;
+    position: static;
+    background-color: rgba(255, 255, 255, 0);
   }
 
-  .main-navigation__toggle {
+  .main-navigation__toggle,
+  .js .main-navigation__toggle {
     display: none;
   }
 
   .main-navigation__item {
     text-align: left;
     position: relative;
+    border: none;
+    padding: 0;
+  }
+
+  .main-navigation__item:last-child {
+    border: none;
   }
 
   .main-navigation__item--current-index::after {

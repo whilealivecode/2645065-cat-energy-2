@@ -14,7 +14,7 @@
 
 <body class="page__body">
   <header class="main-header main-header--index">
-    <div class="container main-header__container">
+    <div class="container">
       <nav class="main-navigation main-navigation--index">
         <div class="main-navigation__wrapper">
           <a class="main-navigation__logo" href="#" aria-current="page">
@@ -24,11 +24,11 @@
               <img class="main-navigation__logo-image main-navigation__logo-image--index" src="images/mobile/header-logo-main-mobile.svg" width="190" height="38" alt="Логотип Cat Energy - интернет-магазина кормов для кошек.">
             </picture>
           </a>
-          <button class="main-navigation__toggle main-navigation__toggle--closed" type="button">
+          <button class="main-navigation__toggle" type="button"><!-- При включенном JS сюда будет добавляться класс main-navigation__toggle--closed -->
             <span class="visually-hidden">Переключить состояние меню.</span>
           </button>
         </div>
-        <ul class="main-navigation__list main-navigation__list--hidden list-reset">
+        <ul class="main-navigation__list list-reset"><!-- При включенном JS сюда будет добавляться класс main-navigation__list--hidden -->
           <li class="main-navigation__item main-navigation__item--current-index">
             <a class="main-navigation__link" href="#" aria-current="page">
               Главная

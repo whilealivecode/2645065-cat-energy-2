@@ -2,10 +2,6 @@
   background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
-.main-header__container {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
-}
-
 @media (min-width: $desktop-width) {
   .main-header--index {
     margin-bottom: -114px;
