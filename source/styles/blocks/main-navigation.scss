@@ -92,13 +92,13 @@
 
 .main-navigation__toggle {
   background-image: url("../../icons/stack.svg#close");
-  transform: translate(-1px, 8px);
+  transform: translate(4px, 9px);
   display: none; /* По умолчанию (JS отключён) кнопка скрыта */
 }
 
 .main-navigation__toggle--closed {
   background-image: url("../../icons/stack.svg#hamburger");
-  transform: translate(4px, 9px);
+  transform: translate(-1px, 8px);
   display: block;
 }
 

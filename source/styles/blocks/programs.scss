@@ -121,6 +121,7 @@ $padding-left: 20px;
   width: 24px;
   height: 11px;
   margin-left: 16px;
+  flex-shrink: 0;
 }
 
 .programs__link:active {

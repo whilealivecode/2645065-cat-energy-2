@@ -137,11 +137,11 @@
 
   .hero::before {
     display: block;
-    background-position: right top;
+    background-position: center;;
     background-image: url("../../images/desktop/1x/hero-background-desktop@1x.jpg");
-    background-size: 1041px 694px;
+    background-size: 1040px 694px;
     z-index: -1;
-    transform: translateX(336px);
+    transform: translateX(520px);
   }
 
   @media (min-resolution: 2dppx) {
@@ -153,7 +153,7 @@
   .hero::after {
     display: block;
     height: 100%;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, #4e4d51 50%, #4e4d51 100%);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, #3d3d41 50%, #3d3d41 100%);
     z-index: -2;
   }
 
