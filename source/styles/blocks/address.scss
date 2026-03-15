@@ -7,10 +7,12 @@
 
 .address__street {
   margin: 0;
+  overflow-wrap: break-word;
 }
 
 .address__city {
   margin: 0;
+  overflow-wrap: break-word;
 }
 
 @media (min-width: $tablet-width) {

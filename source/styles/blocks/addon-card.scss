@@ -1,7 +1,7 @@
 .addon-card {
   display: grid;
-  grid-template: "title title" "quantity price" "button button" / 1fr auto;
-  max-height: 130px;
+  grid-template: "title title" "quantity price" "button button" / calc($container-width-mobile - 60px) 60px;
+  min-height: 130px;
   border-bottom: 1px solid $special-light-grey3;
   padding: 13px 0 18px;
   align-content: start;
@@ -22,6 +22,8 @@
   color: $special-dark-grey;
   margin: 0;
   margin-bottom: 13px;
+  overflow-wrap: break-word;
+  max-width: $container-width-mobile;
 }
 
 .addon-card__quantity {
@@ -30,6 +32,7 @@
   line-height: 14px;
   text-align: left;
   margin-bottom: 15px;
+  overflow-wrap: break-word;
 }
 
 .addon-card__price {
@@ -37,14 +40,17 @@
   font-size: 14px;
   line-height: 14px;
   text-align: right;
+  margin-bottom: 15px;
+  overflow-wrap: break-word;
 }
 
 .addon-card__button {
   grid-area: button;
   font-size: 16px;
   line-height: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 5px;
+  overflow-wrap: break-word;
+  max-width: $container-width-mobile;
 }
 
 @media (min-width: $tablet-width) {
@@ -54,7 +60,6 @@
     grid-template: "title quantity price" "button button button" / 1fr auto 93px;
     min-height: 139px;
     padding: 24px 37px 28px;
-    min-height: 139px;
   }
 
   .addon-card__title {

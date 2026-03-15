@@ -32,6 +32,8 @@
   font-size: 16px;
   line-height: 20px;
   color: $base-color-text;
+  overflow-wrap: break-word;
+  max-width: calc($container-width-mobile - 50px);
 }
 
 @media (min-width: $tablet-width) {

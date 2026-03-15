@@ -1,5 +1,5 @@
 .main-header {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  border-bottom: 1px solid $special-light-grey6;
 }
 
 @media (min-width: $desktop-width) {

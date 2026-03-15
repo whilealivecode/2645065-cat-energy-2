@@ -10,6 +10,7 @@
   line-height: 40px;
   color: $basic-black;
   margin: 0 0 40px 1px;
+  overflow-wrap: break-word;
 }
 
 .instructions__list {
@@ -29,6 +30,8 @@
   padding-left: 80px;
   padding-top: 2px;
   min-height: 60px;
+  overflow-wrap: break-word;
+  max-width: $container-width-mobile;
 }
 
 .instructions__item--nutrients {

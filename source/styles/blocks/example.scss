@@ -18,6 +18,7 @@
   color: $basic-black;
   margin: 0;
   margin-bottom: 40px;
+  overflow-wrap: break-word;
 }
 
 .example__description {
@@ -25,6 +26,7 @@
   line-height: 18px;
   margin: 0;
   margin-bottom: 20px;
+  overflow-wrap: break-word;
 }
 
 .example__data {
@@ -35,7 +37,7 @@
 
 .example__stats {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-between;
   margin: 0;
 }
@@ -69,8 +71,10 @@
   text-align: center;
   color: $basic-black;
   margin-bottom: 9px;
+  max-width: 114px;
   position: relative;
   z-index: 1;
+  overflow-wrap: break-word;
 }
 
 .example__definition {
@@ -84,13 +88,13 @@
   background-color: $special-light-grey;
   position: relative;
   z-index: 1;
+  overflow-wrap: break-word;
 }
 
 .example__costs {
-  display: flex;
-  flex-direction: row;
-  gap: 3px;
-  justify-content: center;
+  display: inline-block;
+  max-width: $container-width-mobile;
+  text-align: center;
 }
 
 .example__label {
@@ -99,6 +103,9 @@
   line-height: 20px;
   text-transform: uppercase;
   color: $basic-black;
+  margin-left: 2px;
+  overflow-wrap: break-word;
+  text-align: right;
 }
 
 .example__value {
@@ -107,6 +114,7 @@
   line-height: 20px;
   text-transform: uppercase;
   color: $basic-black;
+  overflow-wrap: break-word;
 }
 
 @media (min-width: $tablet-width) {

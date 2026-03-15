@@ -32,6 +32,7 @@
   color: $special-black;
   margin: 0;
   min-width: 140px;
+  overflow-wrap: break-word;
 }
 
 @media (min-width: $tablet-width) {

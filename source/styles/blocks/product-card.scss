@@ -2,8 +2,9 @@
   min-height: 209px;
   padding: 20px 0 25px;
   display: grid;
-  grid-template: "image title" 56px "image specs" minmax(52px, auto) "button button" 40px / 140px 140px;
+  grid-template: "image title" "image specs" "button button" / 140px 140px;
   position: relative;
+  align-items: start;
 }
 
 .product-card::before {
@@ -18,6 +19,8 @@
 .product-card__title-link {
   text-decoration-line: none;
   grid-area: title;
+  margin: 2px 0 14px 1px;
+  max-width: 80px;
 }
 
 .product-card__image-link {
@@ -53,30 +56,32 @@
   text-transform: uppercase;
   color: $special-dark-grey;
   margin: 0;
-  margin-top: 2px;
-  margin-left: 1px;
-  max-width: 80px;
+  overflow-wrap: break-word;
 }
 
 .product-card__specs {
   grid-area: specs;
   margin-left: 1px;
+  margin-bottom: 20px;
 }
 
 .product-card__spec {
   font-family: $primary-font;
   font-size: 12px;
   line-height: 16px;
-  text-align: left;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 70px 70px;
+  align-items: start;
 }
 
 .product-card__spec-name {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  text-align: left;
+  overflow-wrap: break-word;
 }
 
 .product-card__spec-value {
+  text-align: right;
+  overflow-wrap: break-word;
   margin: 0;
 }
 
@@ -84,8 +89,8 @@
   grid-area: button;
   font-size: 16px;
   line-height: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
+  align-self: end;
 }
 
 @media (min-width: $tablet-width) {

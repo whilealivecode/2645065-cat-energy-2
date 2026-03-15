@@ -2,7 +2,7 @@
   display: grid;
   align-items: center;
   padding: 25px 0 24px;
-  max-height: 207px;
+  min-height: 207px;
   align-content: start;
   position: relative;
 }
@@ -37,6 +37,8 @@
   padding-top: 53px;
   margin: 0;
   margin-bottom: 8px;
+  overflow-wrap: break-word;
+  max-width: $container-width-mobile;
 }
 
 .product-card-more__title::before,
@@ -60,11 +62,15 @@
   text-align: center;
   margin: 0;
   margin-bottom: 21px;
+  overflow-wrap: break-word;
+  max-width: $container-width-mobile;
 }
 
 .product-card-more__button {
   font-size: 16px;
   line-height: 20px;
+  overflow-wrap: break-word;
+  max-width: $container-width-mobile;
 }
 
 @media (min-width: $tablet-width) {

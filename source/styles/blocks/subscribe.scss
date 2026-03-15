@@ -1,7 +1,7 @@
 .subscribe {
   font-family: $secondary-font;
   color: $basic-black;
-  position: relative;
+  overflow-x: hidden;
 }
 
 .subscribe__container {
@@ -13,29 +13,32 @@
   font-size: 24px;
   line-height: 24px;
   margin: 0;
-  margin-left: calc(20px + $container-margin-mobile);
-  margin-right: calc(20px + $container-margin-mobile);
   margin-bottom: 32px;
-  display: flex;
+  display: inline-block;
+  position: relative;
+  overflow-wrap: break-word;
+  max-width: $container-width-mobile;
 }
 
 .subscribe__title::before {
   content: "";
   background-color: $basic-green;
   height: 2px;
-  position: absolute;
+  width: 100vw;
+  right: 100%;
+  margin-right: 40px;
   top: 10px;
-  left: 0;
-  right: calc(100% - $container-margin-mobile);
+  position: absolute;
 }
 
 .subscribe__title::after {
   content: "";
   background-color: $basic-green;
   height: 2px;
-  flex: 1 0;
-  margin-left: 40px;
-  margin-top: 10px;
+  width: 100vw;
+  left: calc(100% + 40px);
+  top: 10px;
+  position: absolute;
 }
 
 .subscribe__description {
@@ -44,6 +47,7 @@
   line-height: 24px;
   margin: 0;
   margin-bottom: 24px;
+  overflow-wrap: break-word;
 }
 
 @media (min-width: $tablet-width) {

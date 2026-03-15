@@ -1,5 +1,5 @@
 .secondary-products {
-  position: relative;
+  overflow-x: hidden;
 }
 
 .secondary-products__gift {
@@ -15,27 +15,31 @@
   color: $basic-black;
   margin: 0;
   margin-bottom: 35px;
-  margin-left: calc($side-padding-mobile + $container-margin-mobile);
-  display: flex;
+  display: inline-block;
+  position: relative;
+  overflow-wrap: break-word;
+  max-width: $container-width-mobile;
 }
 
 .secondary-products__title::before {
   content: "";
   background-color: $basic-green;
   height: 2px;
-  position: absolute;
+  width: 100vw;
+  right: 100%;
+  margin-right: 40px;
   top: 10px;
-  left: 0;
-  right: calc(100% - $container-margin-mobile);
+  position: absolute;
 }
 
 .secondary-products__title::after {
   content: "";
   background-color: $basic-green;
   height: 2px;
-  flex: 1;
-  margin-left: 40px;
-  margin-top: 10px;
+  width: 100vw;
+  left: calc(100% + 40px);
+  top: 10px;
+  position: absolute;
 }
 
 .secondary-products__addons {

@@ -45,6 +45,7 @@
   line-height: 20px;
   color: $basic-white;
   margin: 0;
+  overflow-wrap: break-word;
 }
 
 @media (min-width: $tablet-width) {
@@ -72,9 +73,7 @@
     background-position: top 57px center;
     width: 245px;
     min-height: 288px;
-    padding-left: 42px;
-    padding-right: 42px;
-    padding-top: 185px;
+    padding: 185px 42px 20px;
   }
 
   .gift::before {
