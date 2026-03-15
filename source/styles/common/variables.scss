@@ -29,3 +29,4 @@ $side-padding-mobile: 20px;
 $side-padding-tablet: 30px;
 $side-padding-desktop: 110px;
 $container-width-mobile: calc($mobile-width - $side-padding-mobile*2);
+$container-width-tablet: calc($tablet-width - $side-padding-tablet*2);

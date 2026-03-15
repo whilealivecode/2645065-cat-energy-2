@@ -81,7 +81,7 @@
     font-family: $secondary-font;
     color: $basic-black;
     min-height: 810px;
-    position: relative;
+    position: static;
     padding-top: 0;
   }
 
@@ -97,9 +97,9 @@
   .hero__image {
     width: 709px;
     height: 609px;
-    position: absolute;
-    z-index: 1;
-    top: 201px;
+    position: absolute; /* позиционируется относительно окна браузера */
+    z-index: -1;
+    top: 327px;
   }
 
   .hero__title {
@@ -125,8 +125,6 @@
     line-height: 26px;
     width: 244px;
     margin-left: 90px;
-    position: absolute;
-    z-index: 2;
   }
 }
 

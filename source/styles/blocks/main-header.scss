@@ -2,6 +2,12 @@
   border-bottom: 1px solid $special-light-grey6;
 }
 
+@media (min-width: $tablet-width) {
+  .main-header {
+    border: none;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .main-header--index {
     margin-bottom: -114px;

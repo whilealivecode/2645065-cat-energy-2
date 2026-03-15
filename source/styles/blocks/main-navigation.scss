@@ -150,9 +150,11 @@
     display: flex;
     flex-wrap: wrap;
     align-items: start;
-    min-width: 440px;
+    max-width: 440px;
+    margin-right: 4px;
     padding-top: 25px;
     column-gap: 34px;
+    row-gap: 15px;
     position: static;
     background-color: rgba(255, 255, 255, 0);
   }
@@ -167,6 +169,7 @@
     position: relative;
     border: none;
     padding: 0;
+    max-width: 440px;
   }
 
   .main-navigation__item:last-child {
