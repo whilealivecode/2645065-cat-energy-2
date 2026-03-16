@@ -77,7 +77,7 @@
   .product-card-more {
     border: 2px solid $basic-grey;
     width: 324px;
-    max-height: 430px;
+    min-height: 430px;
     padding: 50px 35px 40px;
   }
 
@@ -91,6 +91,7 @@
     line-height: 24px;
     padding-top: 110px;
     margin-bottom: 22px;
+    max-width: 250px; /* 324px - 2*35px - паддинги по блокам */
   }
 
   .product-card-more__description {
@@ -104,6 +105,10 @@
   .product-card-more__title::before,
   .product-card-more__title::after {
     height: 60px;
+  }
+
+  .product-card-more__button {
+    max-width: 250px;
   }
 }
 

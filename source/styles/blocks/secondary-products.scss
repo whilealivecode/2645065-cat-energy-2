@@ -54,18 +54,14 @@
   .secondary-products__title {
     font-size: 32px;
     line-height: 32px;
-    margin-bottom: 82px;
-    margin-left: calc($side-padding-tablet + 40px + $container-margin-tablet);
-  }
-
-  .secondary-products__title::before {
-    top: 14px;
-    right: calc(100% - $container-margin-tablet - $side-padding-tablet);
-  }
-
-  .secondary-products__title::after {
-    margin-top: 14px;
+    margin-bottom: 81px;
     margin-left: 40px;
+    max-width: $container-width-tablet - 40px;
+  }
+
+  .secondary-products__title::before,
+  .secondary-products__title::after {
+    top: 14px;
   }
 
   .secondary-products__addons {

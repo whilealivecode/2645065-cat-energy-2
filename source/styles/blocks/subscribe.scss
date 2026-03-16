@@ -59,17 +59,13 @@
     font-size: 32px;
     line-height: 32px;
     margin-bottom: 66px;
-    margin-left: calc($side-padding-tablet + 40px + $container-margin-tablet);
-  }
-
-  .subscribe__title::before {
-    top: 14px;
-    right: calc(100% - $container-margin-tablet - $side-padding-tablet);
-  }
-
-  .subscribe__title::after {
-    margin-top: 14px;
     margin-left: 40px;
+    max-width: $container-width-tablet - 40px;
+  }
+
+  .subscribe__title::before,
+  .subscribe__title::after {
+    top: 14px;
   }
 
   .subscribe__description {
