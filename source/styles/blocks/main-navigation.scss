@@ -153,8 +153,7 @@
     max-width: 440px;
     margin-right: 4px;
     padding-top: 25px;
-    column-gap: 34px;
-    row-gap: 15px;
+    gap: 15px 34px;
     position: static;
     background-color: rgba(255, 255, 255, 0);
   }
@@ -220,7 +219,7 @@
   }
 
   .main-navigation__wrapper {
-    align-items: end;
+    padding-top: 55px;
   }
 
   .main-navigation__logo-image {
@@ -236,8 +235,12 @@
 
   .main-navigation__list {
     padding-top: 71px;
-    min-width: 478px;
-    column-gap: 34px;
+    max-width: 500px;
+    margin-right: 1px;
+  }
+
+  .main-navigation__item {
+    max-width: 500px;
   }
 
   .main-navigation__item--current-index::after {

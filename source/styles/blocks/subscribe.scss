@@ -86,17 +86,13 @@
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 72px;
-    margin-left: calc($side-padding-desktop + $container-margin-desktop);
+    margin-left: 0;
+    max-width: $container-width-desktop - 40px;
   }
 
-  .subscribe__title::before {
-    top: 18px;
-    right: calc(100% - $container-margin-desktop - 70px);
-  }
-
+  .subscribe__title::before,
   .subscribe__title::after {
-    margin-top: 18px;
-    margin-left: 40px;
+    top: 18px;
   }
 
   .subscribe__description {

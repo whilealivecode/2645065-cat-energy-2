@@ -14,6 +14,7 @@
   text-align: left;
   color: $basic-black;
   margin: 0;
+  margin-left: calc($container-margin-mobile + $side-padding-mobile);
   margin-bottom: 35px;
   display: inline-block;
   position: relative;
@@ -43,7 +44,7 @@
 }
 
 .secondary-products__addons {
-  margin-bottom: 35px;
+  margin-bottom: 34px;
 }
 
 @media (min-width: $tablet-width) {
@@ -55,7 +56,7 @@
     font-size: 32px;
     line-height: 32px;
     margin-bottom: 81px;
-    margin-left: 40px;
+    margin-left: calc($container-margin-tablet + $side-padding-tablet + 40px);
     max-width: $container-width-tablet - 40px;
   }
 
@@ -65,7 +66,7 @@
   }
 
   .secondary-products__addons {
-    margin-bottom: 68px;
+    margin-bottom: 69px;
   }
 }
 
@@ -73,34 +74,30 @@
   .secondary-products__title {
     font-size: 40px;
     line-height: 40px;
-    grid-area: title;
-    margin-bottom: 80px;
-    margin-left: calc($side-padding-desktop + $container-margin-desktop);
+    margin-bottom: 79px;
+    margin-left: calc($container-margin-desktop + $side-padding-desktop);
+    max-width: $container-width-desktop - 40px;
   }
 
-  .secondary-products__title::before {
-    top: 18px;
-    right: calc(100% - $container-margin-desktop - 70px);
-  }
-
+  .secondary-products__title::before,
   .secondary-products__title::after {
-    margin-top: 18px;
-    margin-left: 40px;
+    top: 18px;
+  }
+
+  .secondary-products__container {
+    display: grid;
+    grid-template: "addons gift";
+    margin-bottom: 96px;
   }
 
   .secondary-products__addons {
     grid-area: addons;
     margin-bottom: 0;
-    margin-right: 81px;
+    margin-right: 82px;
   }
 
   .secondary-products__gift {
     grid-area: gift;
-    margin-bottom: 96px;
-  }
-
-  .secondary-products__container {
-    display: grid;
-    grid-template: "title title" "addons gift";
+    margin-bottom: 0;
   }
 }

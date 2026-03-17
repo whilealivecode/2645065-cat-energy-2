@@ -75,9 +75,10 @@
     position: absolute;
     top: 95px;
     left: 110px;
-    min-height: 199px;
+    max-height: 199px;
     gap: 86px;
     justify-content: start;
+    overflow-Y: auto;
   }
 
   .contacts__title {

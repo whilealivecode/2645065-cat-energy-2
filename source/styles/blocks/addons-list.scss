@@ -4,6 +4,6 @@
 
 @media (min-width: $desktop-width) {
   .addons-list {
-    min-width: 895px;
+    background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
   }
 }

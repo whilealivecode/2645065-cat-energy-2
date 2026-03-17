@@ -16,16 +16,16 @@
   margin-left: calc(-50vw + 50%);
 }
 
-.product-card__title-link {
-  text-decoration-line: none;
-  grid-area: title;
-  margin: 2px 0 14px 1px;
-  max-width: 80px;
-}
-
 .product-card__image-link {
   display: block;
   grid-area: image;
+}
+
+.product-card__title-link {
+  text-decoration-line: none;
+  grid-area: title;
+  margin: 2px 0 12px 1px;
+  max-width: 80px;
 }
 
 .product-card__title-link:hover,
@@ -70,9 +70,8 @@
   font-size: 12px;
   line-height: 16px;
   display: grid;
-  grid-template-columns: 140px 140px;
+  grid-template-columns: 70px 70px;
   align-items: start;
-  margin-top: 3px;
 }
 
 .product-card__spec-name {
@@ -84,6 +83,7 @@
   text-align: right;
   overflow-wrap: break-word;
   margin: 0;
+  margin-right: 1px;
 }
 
 .product-card__button {
@@ -121,15 +121,8 @@
   }
 
   .product-card__title-link {
-    margin: 2px 0 14px 1px;
+    margin: 4px 4px 14px 1px;
     max-width: 100%;
-  }
-
-  .product-card__spec {
-    font-size: 16px;
-    line-height: 20px;
-    margin-bottom: 12px;
-    grid-template-columns: 125px 125px;
   }
 
   .product-card__title {
@@ -138,12 +131,17 @@
     max-width: 140px;
     text-align: center;
     justify-self: center;
-    margin-top: 1px;
-    margin-left: -2px;
   }
 
   .product-card__title-extra {
     margin-left: 4px;
+  }
+
+  .product-card__spec {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 12px;
+    grid-template-columns: 125px 125px;
   }
 
   .product-card__button {
@@ -154,8 +152,6 @@
 @media (min-width: $desktop-width) {
   .product-card {
     width: 245px;
-    min-height: 430px;
-    grid-template-rows: auto 72px 127px 40px;
     padding-left: 38px;
     padding-right: 38px;
   }
@@ -166,12 +162,19 @@
   }
 
   .product-card__image-link {
-    margin-top: -71px;
-    margin-bottom: 12px;
+    margin-bottom: 2px;
   }
 
-  .product-card__title {
-    max-width: 140px;
-    margin-left: -3px;
+  .product-card__specs {
+    margin-left: 0;
+  }
+
+  .product-card__spec {
+    grid-template-columns: 85px 84px;
+    margin-top: 4px;
+  }
+
+  .product-card__button {
+    max-width: 169px;
   }
 }

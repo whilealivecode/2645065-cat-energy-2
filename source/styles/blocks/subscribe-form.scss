@@ -12,7 +12,7 @@
 .subscribe-form__input {
   color: $base-color-text;
   border: 1px solid $special-light-grey4;
-  padding: 13px;
+  padding: 12px;
   font-family: $secondary-font;
   font-size: 20px;
   line-height: 30px;
@@ -52,7 +52,7 @@
   .subscribe-form__wrapper {
     display: grid;
     grid-template-columns: 376px 256px;
-    grid-template-rows: minmax (56px, auto);
+    grid-template-rows: minmax(56px, auto);
     gap: 0;
     justify-content: center;
   }

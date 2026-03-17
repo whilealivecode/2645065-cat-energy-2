@@ -68,3 +68,11 @@
     justify-content: start;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .social-list {
+    min-width: 132px;
+    max-width: 308px;
+    justify-content: start;
+  }
+}
