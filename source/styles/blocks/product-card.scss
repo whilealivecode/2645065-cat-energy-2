@@ -123,6 +123,7 @@
   .product-card__title-link {
     margin: 4px 4px 14px 1px;
     max-width: 100%;
+    display: grid;
   }
 
   .product-card__title {
@@ -176,5 +177,9 @@
 
   .product-card__button {
     max-width: 169px;
+  }
+
+  .product-card__title-link {
+    display: grid;
   }
 }

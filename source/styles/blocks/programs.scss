@@ -5,7 +5,7 @@ $padding-left: 20px;
 }
 
 .programs__container {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 
 .programs__list {
@@ -74,8 +74,7 @@ $padding-left: 20px;
   line-height: 37px;
   text-transform: uppercase;
   color: $basic-black;
-  margin: 0;
-  margin-bottom: 29px;
+  margin: -1px 0 29px;
   padding-left: calc(90px - $padding-left);
   overflow-wrap: break-word;
   max-width: $container-width-mobile;
@@ -157,7 +156,7 @@ $padding-left: 20px;
     padding: 0;
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 24px;
+    margin-bottom: 25px;
     margin-left: 1px;
     max-width: 340px;
   }
