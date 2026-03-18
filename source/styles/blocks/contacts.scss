@@ -68,13 +68,13 @@
   .contacts__container {
     width: 565px;
     margin: 0;
-    padding: 60px 78px 60px 80px;
+    padding: 59px 78px 60px 79px;
   }
 
   .contacts__data {
     position: absolute;
     top: 95px;
-    left: 110px;
+    left: calc($container-margin-desktop + $side-padding-desktop);
     max-height: 199px;
     gap: 86px;
     justify-content: start;

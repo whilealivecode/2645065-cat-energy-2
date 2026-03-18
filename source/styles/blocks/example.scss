@@ -207,7 +207,7 @@
   .example__container {
     display: grid;
     column-gap: 224px;
-    grid-template: "title compare" 206px "description compare" auto "data compare" auto / 435px 560px;
+    grid-template: "title compare" "description compare" "data compare" / 435px 560px;
   }
 
   .example__stats {
@@ -217,20 +217,20 @@
 
   .example__title {
     grid-area: title;
-    margin-bottom: 130px;
+    margin-bottom: 146px;
     margin-left: 0;
   }
 
   .example__description {
     grid-area: description;
-    margin-bottom: 69px;
+    margin-bottom: 68px;
   }
 
   .example__data {
     grid-area: data;
     flex-direction: column;
     justify-content: start;
-    row-gap: 30px;
+    row-gap: 47px;
     margin-bottom: 0;
   }
 
@@ -239,8 +239,11 @@
   }
 
   .example__costs {
-    flex-direction: row;
-    gap: 62px;
+    display: grid;
+    grid-template-columns: 173px 202px;
+    gap: 60px;
+    max-width: 435px;
+    padding-top: 0;
   }
 
   .example__definition {
@@ -249,10 +252,15 @@
 
   .example__label {
     letter-spacing: 0.1px;
+    margin: 0;
   }
 
   .example__value {
-    margin-right: 1px;
+    margin-left: 4px;
+    text-align: left;
+  }
+
+  .example__group {
+    padding-top: 17px;
   }
 }
-

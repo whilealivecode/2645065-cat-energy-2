@@ -173,7 +173,7 @@ $padding-left: 20px;
   .programs__link {
     font-size: 20px;
     line-height: 30px;
-    max-width: $container-width-tablet - 8px; /* с запасом, иначе появляется полоса прокрутки */
+    max-width: $container-width-tablet - 20px; /* с запасом, иначе появляется полоса прокрутки */
   }
 
   .programs__link::after {
@@ -250,11 +250,13 @@ $padding-left: 20px;
   .programs__title {
     padding-left: calc(212px - $padding-left);
     margin-bottom: 73px;
+    max-width: calc(570px - 52px*2); /* ширина карточки минус паддинги по бокам */
   }
 
   .programs__description {
     margin-bottom: 23px;
     margin-left: 0;
+    max-width: calc(570px - 52px*2);
   }
 
   .programs__item--slim::before {
@@ -288,6 +290,6 @@ $padding-left: 20px;
 
   .programs__link {
     margin-left: 0;
+    max-width: calc(570px - 52px*2);
   }
 }
-
