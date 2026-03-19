@@ -15,5 +15,3 @@ mainNavToggle.addEventListener('click', () => {
   mainNavList.classList.toggle('main-navigation__list--hidden');
   mainNavToggle.classList.toggle('main-navigation__toggle--closed');
 });
-
-

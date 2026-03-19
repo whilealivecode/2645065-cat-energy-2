@@ -84,7 +84,7 @@
   }
 
   .addon-card__button {
-    max-width: calc($container-width-tablet - (37px + 1px)*2);
+    max-width: calc($container-width-tablet - (37px + 1px) *2);
   }
 }
 
@@ -100,7 +100,7 @@
   }
 
   .addon-card__title {
-    margin: 25px 0px 10px 2px;
+    margin: 25px 0 10px 2px;
     max-width: 324px;
   }
 
@@ -120,4 +120,3 @@
     max-width: 244px;
   }
 }
-

@@ -45,7 +45,7 @@
   display: block;
 }
 
-.main-navigation__list--hidden {
+.main-navigation__list--hidden { /* Модификатор, скрывающий главное меню */
   display: none;
 }
 
@@ -96,7 +96,7 @@
   display: none; /* По умолчанию (JS отключён) кнопка скрыта */
 }
 
-.main-navigation__toggle--closed {
+.main-navigation__toggle--closed { /* Модификатор, меняющий иконку на гамбургер */
   background-image: url("../../icons/stack.svg#hamburger");
   transform: translate(-1px, 8px);
   display: block;
