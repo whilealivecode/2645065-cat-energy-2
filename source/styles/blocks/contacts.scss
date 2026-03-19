@@ -1,8 +1,5 @@
 .contacts {
   min-height: 474px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   background-color: $basic-grey;
 }
 
@@ -13,13 +10,11 @@
 .contacts__container {
   width: $mobile-width;
   margin: 0 auto;
+  padding: 26px $side-padding-mobile;
 }
 
 .contacts__data {
-  width: 100%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   background-color: $basic-white;
   min-height: 112px;
 }
@@ -36,10 +31,8 @@
   text-transform: uppercase;
   color: $special-black;
   margin: 0;
-}
-
-.contacts__address {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  min-width: 140px;
+  overflow-wrap: break-word;
 }
 
 @media (min-width: $tablet-width) {
@@ -49,10 +42,11 @@
 
   .contacts__container {
     width: $tablet-width;
+    margin: 0 auto;
+    padding: 60px 70px;
   }
 
   .contacts__data {
-    display: flex;
     justify-content: space-between;
     min-height: 200px;
   }
@@ -60,28 +54,35 @@
   .contacts__title {
     font-size: 20px;
     line-height: 26px;
+    max-width: 164px;
+    margin-top: 1px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .contacts {
     min-height: 400px;
+    position: relative;
   }
 
   .contacts__container {
-    width: $desktop-width;
-    position: relative;
+    width: 565px;
+    margin: 0;
+    padding: 59px 78px 60px 79px;
   }
 
   .contacts__data {
     position: absolute;
     top: 95px;
-    left: 110px;
-    width: 565px;
-    min-height: 199px;
-    padding: 60px 78px 60px 80px;
-    display: flex;
-    justify-content: space-between;
+    left: calc($container-margin-desktop + $side-padding-desktop);
+    max-height: 199px;
+    gap: 86px;
+    justify-content: start;
+    overflow-y: auto;
+  }
+
+  .contacts__title {
+    margin-top: 1px;
   }
 
   .contacts--background {

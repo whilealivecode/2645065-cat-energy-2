@@ -1,18 +1,51 @@
 .hero {
-  background-image: linear-gradient(to bottom, $basic-green 63%, $basic-white 63%, $basic-white 100%);
+  background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 63%, $basic-white 63%, $basic-white 100%);
   font-family: $secondary-font;
   color: $basic-white;
   min-height: 480px;
+  padding-top: 27px;
+  position: relative;
 }
 
-.hero__container {
+.hero--margin-bottom {
   margin-bottom: 20px;
+}
+
+.hero::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: top center;
+  background-image: url("../../images/mobile/1x/hero-background-mobile@1x.jpg");
+  background-size: $mobile-width 302px;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.hero::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 63%;
+  background-image: linear-gradient(to right, #504f54 40%, #404044 60%, #424146 100%);
+  z-index: -2;
+}
+
+@media (min-resolution: 2dppx) {
+  .hero::before {
+    background-image: url("../../images/mobile/2x/hero-background-mobile@2x.jpg");
+  }
 }
 
 .hero__link {
   font-size: 16px;
   line-height: 20px;
-  padding: 10px 0;
+  padding: 10px;
 }
 
 .hero__title {
@@ -21,39 +54,52 @@
   line-height: 36px;
   text-align: center;
   margin: 0;
+  margin-bottom: 25px;
+  margin-left: 2px;
+  overflow-wrap: break-word;
 }
 
 .hero__slogan {
   font-size: 14px;
   line-height: 14px;
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
+  margin: 0;
+  margin-left: 40px;
+  margin-bottom: 29px;
+  overflow-wrap: break-word;
 }
 
 .hero__image {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  display: block;
+  margin-bottom: 3px;
 }
 
 @media (min-width: $tablet-width) {
   .hero {
     background-image: none;
-    background-color: $basic-white;
     font-family: $secondary-font;
     color: $basic-black;
-    min-height: 875px;
+    min-height: 810px;
+    position: static;
+    padding-top: 0;
   }
 
-  .hero__container {
+  .hero::before,
+  .hero::after {
+    display: none;
+  }
+
+  .hero--margin-bottom {
     margin-bottom: 0;
-    position: relative;
-    min-height: 875px;
   }
 
   .hero__image {
     width: 709px;
     height: 609px;
-    position: absolute;
-    z-index: 1;
+    position: absolute; /* позиционируется относительно окна браузера */
+    z-index: -1;
+    top: 327px;
   }
 
   .hero__title {
@@ -61,8 +107,8 @@
     line-height: 60px;
     text-align: left;
     margin-left: 90px;
+    margin-bottom: 41px;
     max-width: 420px;
-    padding-top: 65px;
   }
 
   .hero__slogan {
@@ -70,6 +116,7 @@
     line-height: 20px;
     text-align: left;
     margin-left: 90px;
+    margin-bottom: 50px;
   }
 
   .hero__link {
@@ -78,39 +125,64 @@
     line-height: 26px;
     width: 244px;
     margin-left: 90px;
-    position: absolute;
-    z-index: 2;
   }
 }
 
 @media (min-width: $desktop-width) {
+  $hero-background-left: calc(50% + 520px); /* смещаем направо на половину ширины картинки */
+
   .hero {
     min-height: 694px;
-    background-image: linear-gradient(to right, $basic-white 50%, $basic-green 50%, $basic-green 100%);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85) 100%);
+    position: relative;
   }
 
-  .hero__container {
+  .hero::before {
+    display: block;
+    background-position: $hero-background-left 0;
+    background-image: url("../../images/desktop/1x/hero-background-desktop@1x.jpg");
+    background-size: 1040px 694px;
+    z-index: -1;
+  }
+
+  @media (min-resolution: 2dppx) {
+    .hero::before {
+      background-image: url("../../images/desktop/2x/hero-background-desktop@2x.jpg");
+    }
+  }
+
+  .hero::after {
+    display: block;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, #3d3d41 50%, #3d3d41 100%);
+    z-index: -2;
+  }
+
+  .hero--margin-bottom {
     margin-bottom: 82px;
-    min-height: 694px;
   }
 
   .hero__image {
     width: 552px;
     height: 499px;
     top: 143px;
-    left: calc(50% - 165px);
+    left: calc(50% - 164px);
+    z-index: 10;
   }
 
   .hero__title {
-    margin-left: 80px;
+    margin-left: 79px;
     padding-top: 224px;
   }
 
   .hero__slogan {
-    margin-left: 80px;
+    margin-left: 79px;
+    margin-bottom: 52px;
+    display: inline-block;
+    max-width: 420px;
   }
 
   .hero__link {
-    margin-left: 80px;
+    margin-left: 79px;
   }
 }

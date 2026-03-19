@@ -2,12 +2,34 @@
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
+  min-width: 140px;
 }
 
 .address__street {
   margin: 0;
+  overflow-wrap: break-word;
 }
 
 .address__city {
   margin: 0;
+  overflow-wrap: break-word;
+}
+
+@media (min-width: $tablet-width) {
+  .address {
+    max-width: 160px;
+    font-size: 16px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .address {
+    gap: 19px;
+    text-align: left;
+  }
 }

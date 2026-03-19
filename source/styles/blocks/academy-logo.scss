@@ -1,6 +1,9 @@
 .academy-logo {
   text-decoration-line: none;
-  display: inline-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .academy-logo::after {
@@ -29,4 +32,22 @@
   font-size: 16px;
   line-height: 20px;
   color: $base-color-text;
+  overflow-wrap: break-word;
+  max-width: calc($container-width-mobile - 50px);
+}
+
+@media (min-width: $tablet-width) {
+  .academy-logo {
+    justify-content: start;
+    width: auto;
+    margin: -1px -1px 2px 0;
+  }
+
+  .academy-logo::after {
+    margin-left: 23px;
+  }
+
+  .academy-logo__text {
+    max-width: 183px;
+  }
 }

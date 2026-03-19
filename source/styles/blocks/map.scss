@@ -1,17 +1,21 @@
 .map {
+  border: none;
+}
+
+.map--interactive {
+  width: 100%;
+  display: none;
+}
+
+/* Картинка-фоллбэк в <object> */
+.map--fallback {
+  width: 100%;
+  object-fit: cover;
   display: block;
 }
 
 @media (min-width: $tablet-width) {
   .map {
-    width: $tablet-width;
-    height: 400px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .map {
-    width: $desktop-width;
     height: 400px;
   }
 }

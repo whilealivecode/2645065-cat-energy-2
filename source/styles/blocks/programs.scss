@@ -1,34 +1,70 @@
+$padding-left: 20px;
+
 .programs {
-  min-height: 552px;
+  min-height: 266px; /* на случай, если будет всего один элемент в списке */
+}
+
+.programs__container {
+  margin-bottom: 19px;
 }
 
 .programs__list {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   gap: 20px;
-}
-
-.programs__data {
-  max-width: 240px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .programs__item {
   background-color: $basic-grey;
-  background-repeat: no-repeat;
-  background-position: left top;
   min-height: 266px;
+  padding: 30px 20px 18px;
+  position: relative;
 }
 
-.programs__item--slim {
+.programs__item--slim::before {
+  position: absolute;
+  content: "";
   background-image: url("../../icons/stack.svg#slim-cat");
-  background-size: 50px 53px;
+  background-size: 36px 50px;
+  top: 21px;
+  left: 27px;
+  width: 36px;
+  height: 50px;
+  z-index: 1;
+  background-repeat: no-repeat;
 }
 
-.programs__item--muscle {
+.programs__item--muscle::before {
+  position: absolute;
+  content: "";
   background-image: url("../../icons/stack.svg#muscle-cat");
-  background-size: 67px 50px;
+  background-size: 67px 28px;
+  top: 35px;
+  left: 13px;
+  width: 67px;
+  height: 28px;
+  z-index: 1;
+  background-repeat: no-repeat;
+}
+
+.programs__item--slim::after,
+.programs__item--muscle::after {
+  position: absolute;
+  content: "";
+  background-color: $basic-green;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.programs__item--slim::after {
+  top: 24px;
+  left: 20px;
+}
+
+.programs__item--muscle::after {
+  top: 24px;
+  left: 21px;
 }
 
 .programs__title {
@@ -38,15 +74,31 @@
   line-height: 37px;
   text-transform: uppercase;
   color: $basic-black;
-  margin: 0;
-  min-height: 96px;
-  padding-left: 71px;
+  margin: -1px 0 29px;
+  padding-left: calc(90px - $padding-left);
+  overflow-wrap: break-word;
+  max-width: $container-width-mobile;
 }
 
 .programs__description {
+  position: relative;
   font-size: 14px;
   line-height: 18px;
   color: $base-color-text;
+  margin: 0;
+  margin-bottom: 38px;
+  overflow-wrap: break-word;
+  max-width: $container-width-mobile;
+}
+
+.programs__description::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background-color: $special-light-grey6;
+  left: 0;
+  right: 0;
+  bottom: -23px;
 }
 
 .programs__link {
@@ -56,14 +108,15 @@
   text-transform: uppercase;
   color: $basic-black;
   text-decoration-line: none;
-}
-
-.programs__link:active {
-  opacity: 0.3;
+  display: inline-block;
+  align-items: center;
+  padding: 4px 0;
+  margin-left: 1px;
+  overflow-wrap: break-word;
+  max-width: $container-width-mobile;
 }
 
 .programs__link::after {
-  display: inline-block;
   content: "";
   mask-repeat: no-repeat;
   mask-position: center;
@@ -72,6 +125,12 @@
   mask-size: 24px 11px;
   width: 24px;
   height: 11px;
+  margin-left: 16px;
+  display: inline-block;
+}
+
+.programs__link:active {
+  opacity: 0.3;
 }
 
 /* Стайлгайд не включает :focus. Решение, ориентированное на удобство пользователя: :focus не добавлять, чтобы стрелка не смещалась при фокусе с клавиатуры */
@@ -83,84 +142,153 @@
 }
 
 @media (min-width: $tablet-width) {
+  $padding-left: 52px;
+
   .programs {
-    min-height: 774px;
+    min-height: 372px; /* на случай, если будет всего один элемент в списке */
+  }
+
+  .programs__container {
+    margin-bottom: 45px;
   }
 
   .programs__title {
-    min-height: 137px;
     padding: 0;
     font-size: 36px;
     line-height: 36px;
+    margin-bottom: 25px;
+    margin-left: 1px;
+    max-width: 340px;
   }
 
   .programs__description {
     font-size: 16px;
     line-height: 24px;
     color: $basic-black;
+    margin-bottom: 48px;
+    max-width: 340px;
   }
 
   .programs__link {
     font-size: 20px;
     line-height: 30px;
+    max-width: $container-width-tablet - 20px; /* с запасом, иначе появляется полоса прокрутки */
+  }
+
+  .programs__link::after {
+    margin-left: 27px;
+    transform: translate(-1px, -4px);
+  }
+
+  .programs__description::after {
+    display: none;
   }
 
   .programs__list {
     gap: 30px;
   }
 
-  .programs__data {
-    max-width: 340px;
-    padding-left: 52px;
-    padding-right: 0;
-  }
-
   .programs__item {
-    background-position: right center;
     min-height: 372px;
+    padding: 77px 52px 53px;
   }
 
-  .programs__item--slim {
-    background-size: 200px 211px;
+  .programs__item--slim::before {
+    background-size: 140px 194px;
+    top: 81px;
+    left: 475px;
+    width: 140px;
+    height: 194px;
   }
 
-  .programs__item--muscle {
-    background-size: 268px 200px;
+  .programs__item--muscle::before {
+    background-size: 268px 112px;
+    top: 135px;
+    left: 411px;
+    width: 268px;
+    height: 112px;
+  }
+
+  .programs__item--slim::after,
+  .programs__item--muscle::after {
+    width: 200px;
+    height: 200px;
+    left: 445px;
+    top: 92px;
+  }
+
+  .programs__item--muscle::after {
+    left: 445px;
+    top: 91px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  $padding-left: 52px;
+
   .programs {
-    min-height: 374px;
+    min-height: 374px; /* на случай, если будет всего один элемент в списке */
+  }
+
+  .programs__container {
+    margin-bottom: 71px;
   }
 
   .programs__list {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     gap: 80px;
   }
 
-  .programs__data {
-    max-width: 570px;
-    padding-left: 52px;
-    padding-right: 52px;
-  }
-
   .programs__item {
-    background-position: left top;
     min-height: 374px;
-  }
-
-  .programs__item--slim {
-    background-size: 100px 106px;
-  }
-
-  .programs__item--muscle {
-    background-size: 134px 100px;
+    max-width: 570px;
+    padding: 77px 52px 55px;
   }
 
   .programs__title {
-    min-height: 186px;
-    padding-left: 162px;
+    padding-left: calc(212px - $padding-left);
+    margin-bottom: 73px;
+    max-width: calc(570px - 52px*2); /* ширина карточки минус паддинги по бокам */
+  }
+
+  .programs__description {
+    margin-bottom: 23px;
+    margin-left: 0;
+    max-width: calc(570px - 52px*2);
+  }
+
+  .programs__item--slim::before {
+    background-size: 70px 97px;
+    left: 66px;
+    top: 41px;
+    width: 70px;
+    height: 97px;
+  }
+
+  .programs__item--muscle::before {
+    background-size: 134px 56px;
+    left: 32px;
+    top: 67px;
+    width: 134px;
+    height: 56px;
+  }
+
+  .programs__item--slim::after,
+  .programs__item--muscle::after {
+    width: 100px;
+    height: 100px;
+    left: 51px;
+    top: 47px;
+  }
+
+  .programs__item--muscle::after {
+    left: 51px;
+    top: 47px;
+  }
+
+  .programs__link {
+    margin-left: 0;
+    max-width: calc(570px - 52px*2);
   }
 }

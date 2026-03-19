@@ -1,15 +1,13 @@
 .example {
   background-color: $special-light-grey;
+  padding-top: 25px;
+  padding-bottom: 40px;
+  min-height: 659px;
 }
 
 .example__container {
-  min-height: 659px;
   display: flex;
   flex-direction: column;
-}
-
-.example__compare {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .example__title {
@@ -19,26 +17,52 @@
   line-height: 40px;
   color: $basic-black;
   margin: 0;
+  margin-bottom: 40px;
+  overflow-wrap: break-word;
 }
 
 .example__description {
   font-size: 14px;
   line-height: 18px;
+  margin: 0;
+  margin-bottom: 20px;
+  overflow-wrap: break-word;
 }
 
 .example__data {
   display: flex;
   flex-direction: column;
+  margin-bottom: 19px;
 }
 
 .example__stats {
   display: flex;
-  flex-direction: row;
-  gap: 32px;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 0;
+  align-items: start;
 }
 
 .example__group {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+  width: 124px;
+  min-height: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 14px;
+  margin-bottom: 19px;
+  border-radius: 3px;
+  position: relative;
+}
+
+.example__group::after {
+  width: 100%;
+  min-height: calc(100% - 14px);
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 14px;
+  border: 1px solid $special-light-grey3;
 }
 
 .example__term {
@@ -47,6 +71,11 @@
   line-height: 24px;
   text-align: center;
   color: $basic-black;
+  margin-bottom: 9px;
+  max-width: 114px;
+  position: relative;
+  z-index: 1;
+  overflow-wrap: break-word;
 }
 
 .example__definition {
@@ -54,12 +83,19 @@
   line-height: 12px;
   text-align: center;
   margin: 0;
+  max-width: 88px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: $special-light-grey;
+  position: relative;
+  z-index: 1;
+  overflow-wrap: break-word;
 }
 
 .example__costs {
-  display: flex;
-  flex-direction: row;
-  gap: 3px;
+  display: inline-block;
+  max-width: $container-width-mobile;
+  text-align: center;
 }
 
 .example__label {
@@ -68,6 +104,9 @@
   line-height: 20px;
   text-transform: uppercase;
   color: $basic-black;
+  margin-left: 2px;
+  overflow-wrap: break-word;
+  text-align: right;
 }
 
 .example__value {
@@ -76,88 +115,123 @@
   line-height: 20px;
   text-transform: uppercase;
   color: $basic-black;
+  overflow-wrap: break-word;
 }
 
 @media (min-width: $tablet-width) {
   .example {
     background-image: linear-gradient(to bottom, $basic-white 619px, $special-light-grey 619px);
-  }
-
-  .example__container {
+    padding-top: 45px;
+    padding-bottom: 101px;
     min-height: 1081px;
   }
 
   .example__title {
     font-size: 60px;
     line-height: 60px;
+    margin-bottom: 60px;
+    margin-left: 1px;
   }
 
   .example__description {
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 55px;
+  }
+
+  .example__group {
+    width: 162px;
+    min-height: 86px;
+    padding-top: 16px;
+    margin: 0;
   }
 
   .example__term {
     font-size: 30px;
     line-height: 37px;
+    margin-bottom: 11px;
+    max-width: 152px;
   }
 
   .example__definition {
     font-size: 14px;
     line-height: 14px;
+    max-width: 145px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: $basic-white;
+    margin-right: 2px;
   }
 
   .example__label {
     font-size: 20px;
+    margin-right: 2px;
   }
 
   .example__value {
     font-size: 20px;
+    margin-top: 1px;
+    margin-right: 1px;
   }
 
   .example__data {
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 89px;
   }
 
   .example__stats {
-    flex-direction: row;
     gap: 43px;
+    max-width: 400px;
   }
 
   .example__costs {
+    display: flex;
     flex-direction: column;
+    text-align: right;
+    gap: 9px;
+    padding-top: 11px;
+    margin: 0;
+    justify-content: start;
   }
 }
 
 @media (min-width: $desktop-width) {
   .example {
     background-image: linear-gradient(to bottom, $basic-white 136px, $special-light-grey 136px);
+    padding-top: 0;
+    padding-bottom: 75px;
+    min-height: 598px;
   }
 
   .example__container {
-    min-height: 598px;
     display: grid;
     column-gap: 224px;
-    grid-template: "title compare" auto "description compare" auto "data compare" auto / 436px 560px;
+    grid-template: "title compare" "description compare" "data compare" / 435px 560px;
   }
 
   .example__stats {
-    gap: 42px;
+    gap: 41px;
+    justify-content: start;
   }
 
   .example__title {
     grid-area: title;
+    margin-bottom: 146px;
+    margin-left: 0;
   }
 
   .example__description {
     grid-area: description;
+    margin-bottom: 68px;
   }
 
   .example__data {
     grid-area: data;
     flex-direction: column;
     justify-content: start;
+    row-gap: 47px;
+    margin-bottom: 0;
   }
 
   .example__compare {
@@ -165,7 +239,28 @@
   }
 
   .example__costs {
-    flex-direction: row;
-    gap: 63px;
+    display: grid;
+    grid-template-columns: 173px 202px;
+    gap: 60px;
+    max-width: 435px;
+    padding-top: 0;
+  }
+
+  .example__definition {
+    background-color: $special-light-grey;
+  }
+
+  .example__label {
+    letter-spacing: 0.1px;
+    margin: 0;
+  }
+
+  .example__value {
+    margin-left: 4px;
+    text-align: left;
+  }
+
+  .example__group {
+    padding-top: 17px;
   }
 }

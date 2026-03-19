@@ -1,9 +1,28 @@
 .product-card-more {
   display: grid;
   align-items: center;
-  padding: 25px 20px;
+  padding: 25px 0 24px;
   min-height: 207px;
-  border-bottom: 1px solid $special-light-grey2;
+  align-content: start;
+  position: relative;
+}
+
+.product-card-more::before,
+.product-card-more::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  background-color: $special-light-grey2;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.product-card-more::before {
+  top: 0;
+}
+
+.product-card-more::after {
+  bottom: 0;
 }
 
 .product-card-more__title {
@@ -17,6 +36,9 @@
   position: relative;
   padding-top: 53px;
   margin: 0;
+  margin-bottom: 8px;
+  overflow-wrap: break-word;
+  max-width: $container-width-mobile;
 }
 
 .product-card-more__title::before,
@@ -38,11 +60,17 @@
   font-size: 12px;
   line-height: 16px;
   text-align: center;
+  margin: 0;
+  margin-bottom: 21px;
+  overflow-wrap: break-word;
+  max-width: $container-width-mobile;
 }
 
 .product-card-more__button {
   font-size: 16px;
   line-height: 20px;
+  overflow-wrap: break-word;
+  max-width: $container-width-mobile;
 }
 
 @media (min-width: $tablet-width) {
@@ -50,33 +78,58 @@
     border: 2px solid $basic-grey;
     width: 324px;
     min-height: 430px;
-    padding: 50px 37px 40px;
+    padding: 50px 35px 38px;
+  }
+
+  .product-card-more::before,
+  .product-card-more::after {
+    display: none;
   }
 
   .product-card-more__title {
     font-size: 20px;
     line-height: 24px;
     padding-top: 110px;
+    margin-bottom: 22px;
+    max-width: 250px; /* 324px - 2*35px - паддинги по блокам */
   }
 
   .product-card-more__description {
     font-size: 16px;
     line-height: 18px;
+    max-width: 180px;
+    justify-self: center;
+    margin-bottom: 82px;
   }
 
   .product-card-more__title::before,
   .product-card-more__title::after {
     height: 60px;
   }
+
+  .product-card-more__button {
+    max-width: 250px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .product-card-more {
     width: 245px;
-    padding: 50px 38px 40px;
+    padding: 49px 36px 38px;
   }
 
   .product-card-more__title {
-    padding-top: 150px;
+    padding-top: 99px;
+    margin-bottom: 25px;
+    max-width: 170px;
+  }
+
+  .product-card-more__description {
+    margin-bottom: 91px;
+    max-width: 170px;
+  }
+
+  .product-card-more__button {
+    max-width: 169px;
   }
 }

@@ -1,12 +1,43 @@
 .gift {
   text-align: center;
-  background-color: $basic-green;
   background-repeat: no-repeat;
   background-position: top 59px center;
   background-image: url("../../icons/stack.svg#gift");
   background-size: 78px 81px;
   min-height: 290px;
-  padding-top: 187px;
+  padding: 187px 58px 20px;
+  position: relative;
+}
+
+.gift::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: top left;
+  background-image: url("../../images/mobile/1x/gift-background-mobile@1x.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+@media (min-resolution: 2dppx) {
+  .gift::before {
+    background-image: url("../../images/mobile/2x/gift-background-mobile@2x.jpg");
+  }
+}
+
+.gift::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(104, 183, 56, 0.85);
+  z-index: -1;
 }
 
 .gift__text {
@@ -14,27 +45,44 @@
   line-height: 20px;
   color: $basic-white;
   margin: 0;
+  overflow-wrap: break-word;
 }
 
 @media (min-width: $tablet-width) {
   .gift {
     text-align: left;
-    background-position: top 57px left 77px;
+    background-position: top 57px left 79px;
     min-height: 200px;
-    padding-top: 71px;
-    padding-left: 421px;
-    padding-right: 125px;
+    padding: 71px 125px 20px 422px;
+  }
+
+  .gift::before {
+    background-image: url("../../images/tablet/1x/gift-background-tablet@1x.jpg");
+  }
+
+  @media (min-resolution: 2dppx) {
+    .gift::before {
+      background-image: url("../../images/tablet/2x/gift-background-tablet@2x.jpg");
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .gift {
     text-align: center;
-    background-position: top 56px center;
+    background-position: top 57px center;
     width: 245px;
-    min-height: 288px;
-    padding-left: 42px;
-    padding-right: 42px;
-    padding-top: 185px;
+    min-height: 289px;
+    padding: 185px 42px 20px;
+  }
+
+  .gift::before {
+    background-image: url("../../images/desktop/1x/gift-background-desktop@1x.jpg");
+  }
+
+  @media (min-resolution: 2dppx) {
+    .gift::before {
+      background-image: url("../../images/desktop/2x/gift-background-desktop@2x.jpg");
+    }
   }
 }

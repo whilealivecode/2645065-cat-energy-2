@@ -15,6 +15,8 @@
 .main-navigation__wrapper {
   display: flex;
   justify-content: space-between;
+  padding-top: 14px;
+  padding-bottom: 11px;
 }
 
 .main-navigation__logo {
@@ -29,24 +31,33 @@
   opacity: 0.6;
 }
 
-.main-navigation__logo-image {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
-}
-
 .main-navigation__logo-image--catalog {
   background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
 }
 
 .main-navigation__list {
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 66px;
+  background-color: $basic-white;
   display: block;
+}
+
+.main-navigation__list--hidden { /* Модификатор, скрывающий главное меню */
+  display: none;
 }
 
 .main-navigation__item {
   text-align: center;
+  padding: 22px 10px 21px;
+  border-top: 1px solid $special-light-grey7;
+  overflow-wrap: break-word;
 }
 
-.main-navigation__item--current {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
+.main-navigation__item:last-child {
+  border-bottom: 1px solid $special-light-grey7;
 }
 
 .main-navigation__link {
@@ -66,22 +77,33 @@
   opacity: 0.3;
 }
 
+.main-navigation__toggle,
 .main-navigation__toggle--closed {
-  background-image: url("../../icons/stack.svg#hamburger");
-  background-size: 24px 18px;
-}
-
-.main-navigation__toggle {
   width: 24px;
   height: 20px;
   border: none;
   padding: 0;
   background-color: rgba(255, 255, 255, 0);
   cursor: pointer;
-  background-image: url("../../icons/stack.svg#close");
-  background-size: 19px 20px;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 24px 20px;
+}
+
+.main-navigation__toggle {
+  background-image: url("../../icons/stack.svg#close");
+  transform: translate(4px, 9px);
+  display: none; /* По умолчанию (JS отключён) кнопка скрыта */
+}
+
+.main-navigation__toggle--closed { /* Модификатор, меняющий иконку на гамбургер */
+  background-image: url("../../icons/stack.svg#hamburger");
+  transform: translate(-1px, 8px);
+  display: block;
+}
+
+/* При включённом JS (класс .js на body) показываем кнопку */
+.js .main-navigation__toggle {
   display: block;
 }
 
@@ -104,10 +126,19 @@
 
 @media (min-width: $tablet-width) {
   .main-navigation {
-    display: flex;
     justify-content: space-between;
     flex-direction: row;
     min-height: 75px;
+  }
+
+  .main-navigation--index,
+  .main-navigation--catalog {
+    margin-bottom: 51px;
+  }
+
+  .main-navigation__wrapper {
+    align-items: center;
+    padding: 0;
   }
 
   .main-navigation__logo-image {
@@ -117,15 +148,51 @@
 
   .main-navigation__list {
     display: flex;
-    gap: 33px;
+    flex-wrap: wrap;
+    align-items: start;
+    max-width: 440px;
+    margin-right: 4px;
+    padding-top: 25px;
+    gap: 15px 34px;
+    position: static;
+    background-color: rgba(255, 255, 255, 0);
   }
 
-  .main-navigation__toggle {
+  .main-navigation__toggle,
+  .js .main-navigation__toggle {
     display: none;
   }
 
   .main-navigation__item {
     text-align: left;
+    position: relative;
+    border: none;
+    padding: 0;
+    max-width: 440px;
+  }
+
+  .main-navigation__item:last-child {
+    border: none;
+  }
+
+  .main-navigation__item--current-index::after {
+    content: "";
+    position: absolute;
+    background-color: $basic-green;
+    height: 2px;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+  }
+
+  .main-navigation__item--current-catalog::after {
+    content: "";
+    position: absolute;
+    background-color: $basic-green;
+    height: 2px;
+    left: 0;
+    right: 0;
+    bottom: -8px;
   }
 
   .main-navigation__link {
@@ -137,26 +204,47 @@
 @media (min-width: $desktop-width) {
   .main-navigation {
     width: 100%;
+    z-index: 10;
     min-height: 114px;
+    position: relative;
   }
 
   .main-navigation--index {
-    position: absolute;
-    z-index: 1;
     color: $basic-white;
+    margin-bottom: 0;
   }
 
   .main-navigation--catalog {
-    position: static;
+    margin-bottom: 74px;
+  }
+
+  .main-navigation__wrapper {
+    padding-top: 55px;
   }
 
   .main-navigation__logo-image {
     width: 202px;
     height: 59px;
+    display: block;
   }
 
   .main-navigation__link {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .main-navigation__list {
+    padding-top: 71px;
+    max-width: 540px;
+    margin-right: 1px;
+  }
+
+  .main-navigation__item {
+    max-width: 540px;
+  }
+
+  .main-navigation__item--current-index::after {
+    background-color: $basic-white;
+    bottom: -8px;
   }
 }

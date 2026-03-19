@@ -1,14 +1,14 @@
 .button {
   background-color: $basic-green;
   border: none;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 15px 10px;
   font-family: $secondary-font;
   font-size: 20px;
   line-height: 26px;
   text-transform: uppercase;
   color: $basic-white;
   cursor: pointer;
+  overflow-wrap: break-word;
 }
 
 .button:hover,

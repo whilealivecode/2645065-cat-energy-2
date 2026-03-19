@@ -6,12 +6,17 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 19px;
+  gap: 14px;
 }
 
 .subscribe-form__input {
   color: $base-color-text;
   border: 1px solid $special-light-grey4;
+  padding: 12px;
+  font-family: $secondary-font;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
 }
 
 .subscribe-form__input:hover {
@@ -47,7 +52,7 @@
   .subscribe-form__wrapper {
     display: grid;
     grid-template-columns: 376px 256px;
-    grid-template-rows: auto;
+    grid-template-rows: minmax(56px, auto);
     gap: 0;
     justify-content: center;
   }
@@ -55,6 +60,6 @@
 
 @media (min-width: $desktop-width) {
   .subscribe-form__wrapper {
-    grid-template-columns: 376px 256px;
+    grid-template-columns: 496px 256px;
   }
 }

@@ -1,36 +1,103 @@
 .subscribe {
   font-family: $secondary-font;
   color: $basic-black;
+  overflow-x: hidden;
 }
 
 .subscribe__container {
-  padding-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .subscribe__title {
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
+  margin: 0;
+  margin-bottom: 32px;
+  display: inline-block;
+  position: relative;
+  overflow-wrap: break-word;
+  max-width: $container-width-mobile;
+}
+
+.subscribe__title::before {
+  content: "";
+  background-color: $basic-green;
+  height: 2px;
+  width: 100vw;
+  right: 100%;
+  margin-right: 40px;
+  top: 10px;
+  position: absolute;
+}
+
+.subscribe__title::after {
+  content: "";
+  background-color: $basic-green;
+  height: 2px;
+  width: 100vw;
+  left: calc(100% + 40px);
+  top: 10px;
+  position: absolute;
 }
 
 .subscribe__description {
   text-align: center;
   font-size: 16px;
   line-height: 24px;
+  margin: 0;
+  margin-bottom: 24px;
+  overflow-wrap: break-word;
 }
 
 @media (min-width: $tablet-width) {
   .subscribe__container {
-    padding-bottom: 104px;
+    margin-bottom: 80px;
   }
 
   .subscribe__title {
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 66px;
+    margin-left: 40px;
+    max-width: $container-width-tablet - 40px;
+  }
+
+  .subscribe__title::before,
+  .subscribe__title::after {
+    top: 14px;
   }
 
   .subscribe__description {
     font-size: 24px;
     line-height: 32px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    max-width: 632px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .subscribe__container {
+    margin-bottom: 104px;
+  }
+
+  .subscribe__title {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 72px;
+    margin-left: 0;
+    max-width: $container-width-desktop - 40px;
+  }
+
+  .subscribe__title::before,
+  .subscribe__title::after {
+    top: 18px;
+  }
+
+  .subscribe__description {
+    margin: 0;
+    margin-bottom: 24px;
+    max-width: calc($desktop-width - $side-padding-desktop*2);
   }
 }
