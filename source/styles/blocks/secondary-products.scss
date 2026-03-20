@@ -86,7 +86,7 @@
 
   .secondary-products__container {
     display: grid;
-    grid-template: "addons gift";
+    grid-template-areas: "addons gift";
     margin-bottom: 96px;
   }
 
