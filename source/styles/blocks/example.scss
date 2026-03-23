@@ -120,7 +120,7 @@
 
 @media (min-width: $tablet-width) {
   .example {
-    background-image: linear-gradient(to bottom, $basic-white 619px, $special-light-grey 619px);
+    background-image: linear-gradient(to bottom, $basic-white 0,  $basic-white calc(100% - 462px), $special-light-grey calc(100% - 462px), $special-light-grey 100%);
     padding-top: 45px;
     padding-bottom: 101px;
     min-height: 1081px;
