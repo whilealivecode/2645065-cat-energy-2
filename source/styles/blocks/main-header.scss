@@ -1,5 +1,6 @@
 .main-header {
   border-bottom: 1px solid $special-light-grey6;
+  overflow-x: hidden;
 }
 
 @media (min-width: $tablet-width) {

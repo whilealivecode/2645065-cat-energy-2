@@ -32,13 +32,18 @@
 }
 
 .main-navigation__list {
-  z-index: 10;
+  position: static;
+  background-color: $basic-white;
+  display: block;
+}
+
+/* При включённом JS (класс .js на body) меню становится поверх главного окна */
+.js .main-navigation__list {
   position: absolute;
+  z-index: 10;
   left: 0;
   right: 0;
   top: 66px;
-  background-color: $basic-white;
-  display: block;
 }
 
 .main-navigation__list--hidden { /* Модификатор, скрывающий главное меню */
@@ -48,12 +53,27 @@
 .main-navigation__item {
   text-align: center;
   padding: 22px 10px 21px;
-  border-top: 1px solid $special-light-grey7;
   overflow-wrap: break-word;
+  position: relative;
 }
 
-.main-navigation__item:last-child {
-  border-bottom: 1px solid $special-light-grey7;
+.main-navigation__item::before,
+.main-navigation__item:last-child::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  background-color: $special-light-grey7;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  left: 0;
+}
+
+.main-navigation__item::before {
+  top: 0;
+}
+
+.main-navigation__item:last-child::after {
+  bottom: 0;
 }
 
 .main-navigation__link {
@@ -150,8 +170,11 @@
     margin-right: 4px;
     padding-top: 25px;
     gap: 15px 34px;
-    position: static;
     background-color: rgba(255, 255, 255, 0);
+  }
+
+  .js .main-navigation__list {
+    position: static;
   }
 
   .main-navigation__toggle,
@@ -162,14 +185,14 @@
   .main-navigation__item {
     text-align: left;
     position: relative;
-    border: none;
     padding: 0;
     max-width: 440px;
   }
 
-  .main-navigation__item:last-child {
-    border: none;
-  }
+  .main-navigation__item::before,
+  .main-navigation__item:last-child::after {
+    display: none;
+}
 
   .main-navigation__item--current-index::after {
     content: "";
