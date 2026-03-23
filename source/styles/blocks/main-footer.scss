@@ -26,10 +26,6 @@
   fill: $special-grey2;
 }
 
-.main-footer__logo-image {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
-}
-
 @media (min-width: $tablet-width) {
   .main-footer {
     min-height: 147px;

@@ -31,10 +31,6 @@
   opacity: 0.6;
 }
 
-.main-navigation__logo-image--catalog {
-  background-color: transparent; // Временное свойство, чтобы линтер не показывал ошибку
-}
-
 .main-navigation__list {
   z-index: 10;
   position: absolute;
