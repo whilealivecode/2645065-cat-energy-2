@@ -17,6 +17,7 @@
   display: flex;
   background-color: $basic-white;
   min-height: 112px;
+  z-index: 10;
 }
 
 .contacts__data--background {
@@ -33,6 +34,31 @@
   margin: 0;
   min-width: 140px;
   overflow-wrap: break-word;
+}
+
+.contacts__map-wrapper {
+  position: relative;
+  height: 362px;
+}
+
+.contacts__map {
+  border: none;
+  width: 100%;
+  height: 362px;
+}
+
+.contacts__map--interactive {
+  display: none;
+}
+
+.js .contacts__map--interactive {
+  display: block;
+  position: absolute;
+}
+
+.contacts__map--fallback {
+  object-fit: cover;
+  display: block;
 }
 
 @media (min-width: $tablet-width) {
@@ -56,6 +82,14 @@
     line-height: 26px;
     max-width: 164px;
     margin-top: 1px;
+  }
+
+  .contacts__map-wrapper {
+    height: 400px;
+  }
+
+  .contacts-map {
+    height: 400px;
   }
 }
 
