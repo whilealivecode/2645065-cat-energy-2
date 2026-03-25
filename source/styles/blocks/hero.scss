@@ -97,7 +97,7 @@
   .hero__image {
     width: 709px;
     height: 609px;
-    position: absolute; /* позиционируется относительно окна браузера */
+    position: absolute;
     z-index: -1;
     top: 327px;
   }
@@ -116,7 +116,7 @@
     line-height: 20px;
     text-align: left;
     margin-left: 90px;
-    margin-bottom: 50px;
+    margin-bottom: 49px;
   }
 
   .hero__link {
@@ -152,19 +152,19 @@
   .hero__image {
     width: 552px;
     height: 499px;
-    top: 143px;
+    top: 29px;
     left: calc(50% - 164px);
     z-index: 10;
   }
 
   .hero__title {
     margin-left: 79px;
-    padding-top: 224px;
+    padding-top: 110px;
   }
 
   .hero__slogan {
     margin-left: 79px;
-    margin-bottom: 52px;
+    margin-bottom: 51px;
     display: inline-block;
     max-width: 420px;
   }

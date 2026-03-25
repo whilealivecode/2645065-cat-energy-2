@@ -15,8 +15,8 @@
 .main-navigation__wrapper {
   display: flex;
   justify-content: space-between;
-  padding-top: 14px;
-  padding-bottom: 11px;
+  padding-top: 15px;
+  padding-bottom: 10px;
 }
 
 .main-navigation__logo {
@@ -52,7 +52,7 @@
 
 .main-navigation__item {
   text-align: center;
-  padding: 22px 10px 21px;
+  padding: 22px 10px;
   overflow-wrap: break-word;
   position: relative;
 }
@@ -223,9 +223,7 @@
 @media (min-width: $desktop-width) {
   .main-navigation {
     width: 100%;
-    z-index: 10;
     min-height: 114px;
-    position: relative;
   }
 
   .main-navigation--index {

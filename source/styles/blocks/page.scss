@@ -1,3 +1,7 @@
+.page__body {
+  overflow-x: hidden; /* декоративные линии у выпадающего по щелчку меню не будут вызывать полосу прокрутки */
+}
+
 @media (min-width: $desktop-width) {
   $body-background-left: calc(50% + 520px); /* смещаем направо на половину ширины картинки */
 

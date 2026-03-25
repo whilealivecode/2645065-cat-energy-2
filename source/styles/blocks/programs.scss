@@ -126,6 +126,7 @@ $padding-left: 20px;
   width: 24px;
   height: 11px;
   margin-left: 16px;
+  margin-bottom: 1px;
   display: inline-block;
 }
 
@@ -176,8 +177,9 @@ $padding-left: 20px;
   }
 
   .programs__link::after {
-    margin-left: 27px;
+    margin-left: 28px;
     transform: translate(-1px, -4px);
+    margin-bottom: 0;
   }
 
   .programs__description::after {
