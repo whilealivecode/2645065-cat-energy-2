@@ -1,5 +1,5 @@
 .hero {
-  background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 63%, $basic-white 63%, $basic-white 100%);
+  background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85) calc(100% - 178px), $basic-white calc(100% - 178px), $basic-white 100%); /* 178px - высота белой области в блоке hero */
   font-family: $secondary-font;
   color: $basic-white;
   min-height: 480px;
@@ -31,7 +31,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 63%;
+  height: calc(100% - 178px);
   background-image: linear-gradient(to right, #504f54 40%, #404044 60%, #424146 100%);
   z-index: -2;
 }
