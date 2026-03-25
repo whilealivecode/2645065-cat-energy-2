@@ -1,0 +1,1 @@
+document.body.classList.add("js");var a=document.querySelector(".main-navigation__list"),i=document.querySelector(".main-navigation__toggle");i.classList.add("main-navigation__toggle--closed");a.classList.add("main-navigation__list--hidden");i.addEventListener("click",()=>{a.classList.toggle("main-navigation__list--hidden"),i.classList.toggle("main-navigation__toggle--closed")});
