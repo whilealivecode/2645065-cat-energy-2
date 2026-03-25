@@ -125,30 +125,17 @@
     line-height: 26px;
     width: 244px;
     margin-left: 90px;
+    margin-bottom: 30px; /* на случай переполнения, чтобы кнопка не прижималась к самому низу */
   }
 }
 
 @media (min-width: $desktop-width) {
-  $hero-background-left: calc(50% + 520px); /* смещаем направо на половину ширины картинки */
+  $navidation-desktop-height: 114px;
 
   .hero {
-    min-height: 694px;
+    min-height: 580px; /* 694px минус минимальная высота хедера */
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85) 100%);
     position: relative;
-  }
-
-  .hero::before {
-    display: block;
-    background-position: $hero-background-left 0;
-    background-image: url("../../images/desktop/1x/hero-background-desktop@1x.jpg");
-    background-size: 1040px 694px;
-    z-index: -1;
-  }
-
-  @media (min-resolution: 2dppx) {
-    .hero::before {
-      background-image: url("../../images/desktop/2x/hero-background-desktop@2x.jpg");
-    }
   }
 
   .hero::after {
