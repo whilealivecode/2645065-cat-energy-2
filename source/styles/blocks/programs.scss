@@ -1,5 +1,3 @@
-$padding-left: 20px;
-
 .programs {
   min-height: 266px; /* на случай, если будет всего один элемент в списке */
 }
@@ -75,7 +73,7 @@ $padding-left: 20px;
   text-transform: uppercase;
   color: $basic-black;
   margin: -1px 0 29px;
-  padding-left: calc(90px - $padding-left);
+  padding-left: 70px; /* общий отступ слева 90px минус паддинг слева 20px */
   overflow-wrap: break-word;
   max-width: $container-width-mobile;
 }
@@ -143,8 +141,6 @@ $padding-left: 20px;
 }
 
 @media (min-width: $tablet-width) {
-  $padding-left: 52px;
-
   .programs {
     min-height: 372px; /* на случай, если будет всего один элемент в списке */
   }
@@ -226,8 +222,6 @@ $padding-left: 20px;
 }
 
 @media (min-width: $desktop-width) {
-  $padding-left: 52px;
-
   .programs {
     min-height: 374px; /* на случай, если будет всего один элемент в списке */
   }
@@ -249,7 +243,7 @@ $padding-left: 20px;
   }
 
   .programs__title {
-    padding-left: calc(212px - $padding-left);
+    padding-left: 160px; /* общий отступ слева 212px минус паддинг слева 52px */
     margin-bottom: 73px;
     max-width: calc(570px - 52px*2); /* ширина карточки минус паддинги по бокам */
   }

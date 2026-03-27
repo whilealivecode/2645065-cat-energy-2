@@ -6,13 +6,17 @@
 }
 
 .subscribe-form__input {
-  color: $base-color-text;
   border: 1px solid $special-light-grey4;
   padding: 12px;
+  color: $base-color-text;
   font-family: $secondary-font;
   font-size: 20px;
   line-height: 30px;
   text-transform: uppercase;
+}
+
+.subscribe-form__input::placeholder {
+  color: $base-color-text;
 }
 
 .subscribe-form__input:hover {
@@ -28,7 +32,8 @@
 }
 
 .subscribe-form__input:invalid {
-  border: 2px solid $basic-red;
+  border: none;
+  box-shadow: inset 0 0 0 2px $basic-red;
 }
 
 .subscribe-form__input:disabled,
