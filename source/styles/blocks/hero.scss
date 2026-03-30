@@ -81,7 +81,6 @@
     font-family: $secondary-font;
     color: $basic-black;
     min-height: 810px;
-    position: static;
     padding-top: 0;
   }
 
@@ -99,7 +98,7 @@
     height: 609px;
     position: absolute;
     z-index: -1;
-    top: 327px;
+    top: 201px;
   }
 
   .hero__title {
@@ -135,7 +134,6 @@
   .hero {
     min-height: 580px; /* 694px минус минимальная высота хедера */
     background-image: linear-gradient(to right, rgba($basic-white, 0) 50%, rgba($basic-green, 0.85) 50%, rgba($basic-green, 0.85) 100%);
-    position: relative;
   }
 
   .hero::after {
